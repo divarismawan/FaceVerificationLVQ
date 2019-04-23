@@ -16,7 +16,7 @@ from sklearn.metrics import confusion_matrix
 from sklearn.decomposition import PCA
 from sklearn.svm import SVC
 
-PATH = "D:/Kuliah/smt 6/Teknologi  Biometrik/FaceVerificationLVQ/Grayscale"
+PATH = "D:/TUGAS/FaceVerificationLVQ/LOG"
 
 cats = [cats for cats in os.listdir(PATH+"\\.")]
 
