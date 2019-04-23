@@ -42,21 +42,22 @@ for category in classes:
         gaussian = cv2.GaussianBlur(roi_color, (3, 3), 3)
 
         gray = cv2.cvtColor(gaussian, cv2.COLOR_BGR2GRAY)
-
-
         lapl = cv2.Laplacian(gray, cv2.CV_16S, 5)
 
         abs_dst = cv2.convertScaleAbs(lapl)
+
+        dim = (300, 300)
+        resized = cv2.resize(abs_dst, dim, interpolation=cv2.INTER_AREA)
 
         # detected_faces = detect_faces(abs_dst)
 
         # cv2.imshow("grayscale",contrast_img)
         # cv2.imshow("gaussian",gaussian)
-        # cv2.imshow("laplacian", abs_dst)
+        cv2.imshow("laplacian", resized)
         # cv2.imshow("hasil laplacian", detected_faces)
 
-        # cv2.waitKey(0)
+        cv2.waitKey(0)
 
         hasil = url_class + category + '/ROI_{}_{}.jpg'.format(category, img)
-        cv2.imwrite(hasil, lapl)
+        cv2.imwrite(hasil, resized)
         print("{} gambar {} tersimpan".format(category,img))
