@@ -16,12 +16,9 @@ from sklearn.metrics import confusion_matrix
 from sklearn.decomposition import PCA
 from sklearn.svm import SVC
 
-PATH = "D:/TUGAS/FaceVerificationLVQ/LOG"
-
+PATH = "D:/Kuliah/smt 6/Teknologi  Biometrik/FaceVerificationLVQ/Grayscale"
 cats = [cats for cats in os.listdir(PATH+"\\.")]
-
-# print(cats)
-# print(class_folders)
+    
 
 def append_feature():
 
@@ -33,9 +30,9 @@ def append_feature():
         for file in os.listdir(PATH+"\\{}".format(dir_images)):
             dir = os.path.join(PATH+"\\{}".format(dir_images),file)
             #get images
-            img = cv2.imread(dir)
+            img = cv2.imread(dir,0)
+            # tambahkan preprocessing
             flatten_images.append(img.flatten())
-            #append images
             images.append(img)
             target.append(i)
 
@@ -51,6 +48,16 @@ def append_feature():
                 )
     pass
 
+def plot_gallery(images, titles, h, w, n_row=3, n_col=4):
+    """Helper function to plot a gallery of portraits"""
+    plt.figure(figsize=(1.8 * n_col, 2.4 * n_row))
+    plt.subplots_adjust(bottom=0, left=.01, right=.99, top=.90, hspace=.35)
+    for i in range(n_row * n_col):
+        plt.subplot(n_row, n_col, i + 1)
+        plt.imshow(images[i].reshape((h, w)), cmap=plt.cm.gray)
+        plt.title(titles[i], size=12)
+        plt.xticks(())
+        plt.yticks(())
 
 def main():
 
@@ -58,24 +65,28 @@ def main():
     image_dataset = append_feature()
     print("success")
 
-    n_samples, h, w, n = image_dataset.images.shape
+    n_samples, h, w = image_dataset.images.shape
 
     # X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.25, random_state=42)
     X_train, X_test, y_train, y_test = train_test_split(image_dataset.data, image_dataset.target, test_size=0.1)
 
-    print(X_test.shape)
+    print(type(X_train))
 
-    n_components = 6
+    n_components = 40
 
-    pca = PCA(n_components=n_components, svd_solver='randomized',
-          whiten=True).fit(X_train)
+    pca = PCA(n_components=n_components).fit(X_train)
 
-    # eigenfaces = pca.components_.reshape((n_components, 10, 10))
+    eigenfaces = pca.components_.reshape((n_components, h, w))
 
     print("Projecting the input data on the eigenfaces orthonormal basis")
     X_train_pca = pca.transform(X_train)
     X_test_pca = pca.transform(X_test)
-    print(X_train_pca)
+    print(X_test_pca)
+
+    eigenface_titles = ["eigenface %d" % i for i in range(eigenfaces.shape[0])]
+    plot_gallery(eigenfaces, eigenface_titles, h, w)
+
+    plt.show()
 
 
 if __name__ == "__main__":
