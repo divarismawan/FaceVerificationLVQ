@@ -15,8 +15,9 @@ from sklearn.metrics import classification_report
 from sklearn.metrics import confusion_matrix
 from sklearn.decomposition import PCA
 from sklearn.svm import SVC
+from sklearn.neighbors import KNeighborsClassifier
 
-PATH = "D:/Kuliah/smt 6/Teknologi  Biometrik/FaceVerificationLVQ/Grayscale"
+PATH = "D:/0TUGAS TI/FaceVerificationLVQ/Grayscale"
 cats = [cats for cats in os.listdir(PATH+"\\.")]
     
 
@@ -81,7 +82,14 @@ def main():
     print("Projecting the input data on the eigenfaces orthonormal basis")
     X_train_pca = pca.transform(X_train)
     X_test_pca = pca.transform(X_test)
-    print(X_test_pca)
+    print(X_train_pca)
+
+    # k = 5
+    # knn_model = KNeighborsClassifier(n_neighbors=k)
+    # knn_model.fit(X_train_pca, y_train)
+    #
+    # y_predict = knn_model.predict(X_test_pca)
+
 
     eigenface_titles = ["eigenface %d" % i for i in range(eigenfaces.shape[0])]
     plot_gallery(eigenfaces, eigenface_titles, h, w)
