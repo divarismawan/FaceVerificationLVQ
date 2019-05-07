@@ -11,14 +11,14 @@ from sklearn.utils import Bunch
 from sklearn.model_selection import train_test_split
 from sklearn.model_selection import GridSearchCV
 from sklearn.datasets import fetch_lfw_people
-from sklearn.metrics import classification_report
+from sklearn.metrics import classification_report, accuracy_score
 from sklearn.metrics import confusion_matrix
 from sklearn.decomposition import PCA
 from sklearn.svm import SVC
 from sklearn.neighbors import KNeighborsClassifier
 
-TRAIN_PATH = "D:/Kuliah/smt 6/Teknologi  Biometrik/FaceVerificationLVQ/Grayscale/train"
-TEST_PATH = "D:/Kuliah/smt 6/Teknologi  Biometrik/FaceVerificationLVQ/Grayscale/test"
+TRAIN_PATH = "Grayscale/train"
+TEST_PATH = "Grayscale/test"
 # cats = [cats for cats in os.listdir(PATH+"\\.")]
     
 
@@ -86,8 +86,8 @@ def main():
     X_test = test_dataset.data
     y_test = test_dataset.target
 
-    print(y_train)
-    print(y_test)
+    # print(y_train)
+    # print(y_test)
 
 
     n_components = 21
@@ -99,21 +99,33 @@ def main():
     X_test_pca = pca.transform(X_test)
 
 
-    # for k in range(1,101):
-    #     knn_model = KNeighborsClassifier(n_neighbors=k)
-    #     knn_model.fit(X_train_pca, y_train)
+    # ni paling banyak benarnya dari 1-10 k nya
 
-    #     y_predict = knn_model.predict(X_test_pca)
-    #     print("target: "+str(k))
-    #     print(y_test)
-    #     print("uji: "+str(k))
-    #     print(y_predict)
+    k = 5
+    knn_model = KNeighborsClassifier(n_neighbors=k)
+    knn_model.fit(X_train_pca, y_train)
 
+    y_predict = knn_model.predict(X_test_pca)
+    # print(accuracy_score(y_test, y_predict))
+    salah = 0
+    # print("target: "+str(k))
+    for i in range(0,len(y_predict)):
+        print(str(i)+". "+str(y_test[i]))
+        # print("uji: "+str(k))
+        print(str(i)+". "+str(y_predict[i]))
+        print("\n")
+        if (y_test[i]!=y_predict[i]):
+            salah+=1
+
+    benar = 13 - salah
+    akurasi = benar/13 * 100
+    print("benar ="+str(benar))
+    print("\nakurasi ="+str(akurasi))
 
     eigenface_titles = ["eigenface %d" % i for i in range(eigenfaces.shape[0])]
     plot_gallery(eigenfaces, eigenface_titles, h, w)
 
-    plt.show()
+    # plt.show()
 
 
 if __name__ == "__main__":
