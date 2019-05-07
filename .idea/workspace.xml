@@ -1,60 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a1fe8ec0-3a3c-4166-b08b-7cceb7d39607" name="Default Changelist" comment="25 class">
-      <change afterPath="$PROJECT_DIR$/Grayscale/gabung/Bawa Arnawa/ROI_GRAY_Bawa Arnawa_DSC06192.JPG.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Grayscale/gabung/Bawa Arnawa/ROI_GRAY_Bawa Arnawa_DSC06193.JPG.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Grayscale/gabung/Bawa Arnawa/ROI_GRAY_Bawa Arnawa_DSC06194.JPG.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Grayscale/gabung/Bawa Arnawa/ROI_GRAY_Bawa Arnawa_DSC06195.JPG.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Grayscale/gabung/Bawa Arnawa/ROI_GRAY_Bawa Arnawa_DSC06196.JPG.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Grayscale/gabung/Bawa P/ROI_GRAY_Bawa P_DSC06465.JPG.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Grayscale/gabung/Bawa P/ROI_GRAY_Bawa P_DSC06466.JPG.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Grayscale/gabung/Bawa P/ROI_GRAY_Bawa P_DSC06467.JPG.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Grayscale/gabung/Bawa P/ROI_GRAY_Bawa P_DSC06468.JPG.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Grayscale/gabung/Bawa P/ROI_GRAY_Bawa P_DSC06469.JPG.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Grayscale/gabung/Benediltus/ROI_GRAY_Benediltus_DSC05259.JPG.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Grayscale/gabung/Benediltus/ROI_GRAY_Benediltus_DSC05260.JPG.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Grayscale/gabung/Benediltus/ROI_GRAY_Benediltus_DSC05261.JPG.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Grayscale/gabung/Benediltus/ROI_GRAY_Benediltus_DSC05262.JPG.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Grayscale/gabung/Benediltus/ROI_GRAY_Benediltus_DSC05263.JPG.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Grayscale/gabung/Budastra/ROI_GRAY_Budastra_DSC05566.JPG.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Grayscale/gabung/Budastra/ROI_GRAY_Budastra_DSC05567.JPG.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Grayscale/gabung/Budastra/ROI_GRAY_Budastra_DSC05568.JPG.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Grayscale/gabung/Budastra/ROI_GRAY_Budastra_DSC05569.JPG.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Grayscale/gabung/Budastra/ROI_GRAY_Budastra_DSC05570.JPG.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Grayscale/gabung/Budiasa/ROI_GRAY_Budiasa_DSC06353.JPG.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Grayscale/gabung/Budiasa/ROI_GRAY_Budiasa_DSC06354.JPG.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Grayscale/gabung/Budiasa/ROI_GRAY_Budiasa_DSC06355.JPG.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Grayscale/gabung/Budiasa/ROI_GRAY_Budiasa_DSC06356.JPG.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Grayscale/gabung/Budiasa/ROI_GRAY_Budiasa_DSC06357.JPG.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Grayscale/gabung/Citra Aprilia/ROI_GRAY_Citra Aprilia_DSC05179.JPG.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Grayscale/gabung/Citra Aprilia/ROI_GRAY_Citra Aprilia_DSC05180.JPG.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Grayscale/gabung/Citra Aprilia/ROI_GRAY_Citra Aprilia_DSC05181.JPG.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Grayscale/gabung/Citra Aprilia/ROI_GRAY_Citra Aprilia_DSC05182.JPG.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Grayscale/gabung/Citra Aprilia/ROI_GRAY_Citra Aprilia_DSC05183.JPG.jpg" afterDir="false" />
+    <list default="true" id="a1fe8ec0-3a3c-4166-b08b-7cceb7d39607" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Grayscale/gabung/Ade Yuli/ROI_GRAY_Ade Yuli_DSC05249.JPG.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Grayscale/gabung/Ade Yuli/ROI_GRAY_Ade Yuli_DSC05249.JPG.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Grayscale/gabung/Ade Yuli/ROI_GRAY_Ade Yuli_DSC05252.JPG.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Grayscale/gabung/Ade Yuli/ROI_GRAY_Ade Yuli_DSC05252.JPG.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Grayscale/gabung/Adhi Pramudya/ROI_GRAY_Adhi Pramudya_DSC05280.JPG.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Grayscale/gabung/Adhi Pramudya/ROI_GRAY_Adhi Pramudya_DSC05280.JPG.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Grayscale/gabung/Adhi Pramudya/ROI_GRAY_Adhi Pramudya_DSC05282.JPG.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Grayscale/gabung/Adhi Pramudya/ROI_GRAY_Adhi Pramudya_DSC05282.JPG.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Grayscale/gabung/Adi Widhiantara/ROI_GRAY_Adi Widhiantara_DSC05120.JPG.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Grayscale/gabung/Adi Widhiantara/ROI_GRAY_Adi Widhiantara_DSC05120.JPG.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Grayscale/gabung/Adi Widhiantara/ROI_GRAY_Adi Widhiantara_DSC05122.JPG.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Grayscale/gabung/Adi Widhiantara/ROI_GRAY_Adi Widhiantara_DSC05122.JPG.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Grayscale/gabung/Aditya Utama/ROI_GRAY_Aditya Utama_DSC06074.JPG.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Grayscale/gabung/Aditya Utama/ROI_GRAY_Aditya Utama_DSC06074.JPG.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Grayscale/gabung/Aditya Utama/ROI_GRAY_Aditya Utama_DSC06076.JPG.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Grayscale/gabung/Aditya Utama/ROI_GRAY_Aditya Utama_DSC06076.JPG.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Grayscale/gabung/Agung Meidi/ROI_GRAY_Agung Meidi_DSC05577.JPG.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Grayscale/gabung/Agung Meidi/ROI_GRAY_Agung Meidi_DSC05577.JPG.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Grayscale/gabung/Agung Meidi/ROI_GRAY_Agung Meidi_DSC05579.JPG.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Grayscale/gabung/Agung Meidi/ROI_GRAY_Agung Meidi_DSC05579.JPG.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Grayscale/gabung/Agung/ROI_GRAY_Agung_DSC05010.JPG.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Grayscale/gabung/Agung/ROI_GRAY_Agung_DSC05010.JPG.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Grayscale/gabung/Agung/ROI_GRAY_Agung_DSC05012.JPG.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Grayscale/gabung/Agung/ROI_GRAY_Agung_DSC05012.JPG.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Grayscale/gabung/Artajaya/ROI_GRAY_Artajaya_DSC05847.JPG.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Grayscale/gabung/Artajaya/ROI_GRAY_Artajaya_DSC05847.JPG.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Grayscale/gabung/Ary Satyawan/ROI_GRAY_Ary Satyawan_DSC05335.JPG.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Grayscale/gabung/Ary Satyawan/ROI_GRAY_Ary Satyawan_DSC05335.JPG.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Grayscale/test/Ade Yuli/ROI_GRAY_Ade Yuli_DSC05252.JPG.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Grayscale/test/Ade Yuli/ROI_GRAY_Ade Yuli_DSC05252.JPG.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Grayscale/test/Adhi Pramudya/ROI_GRAY_Adhi Pramudya_DSC05282.JPG.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Grayscale/test/Adhi Pramudya/ROI_GRAY_Adhi Pramudya_DSC05282.JPG.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Grayscale/test/Adi Widhiantara/ROI_GRAY_Adi Widhiantara_DSC05122.JPG.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Grayscale/test/Adi Widhiantara/ROI_GRAY_Adi Widhiantara_DSC05122.JPG.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Grayscale/test/Aditya Utama/ROI_GRAY_Aditya Utama_DSC06076.JPG.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Grayscale/test/Aditya Utama/ROI_GRAY_Aditya Utama_DSC06076.JPG.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Grayscale/test/Agung Meidi/ROI_GRAY_Agung Meidi_DSC05579.JPG.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Grayscale/test/Agung Meidi/ROI_GRAY_Agung Meidi_DSC05579.JPG.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Grayscale/test/Agung/ROI_GRAY_Agung_DSC05010.JPG.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Grayscale/test/Agung/ROI_GRAY_Agung_DSC05010.JPG.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Grayscale/test/Artajaya/ROI_GRAY_Artajaya_DSC05847.JPG.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Grayscale/test/Artajaya/ROI_GRAY_Artajaya_DSC05847.JPG.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Grayscale/test/Ary Satyawan/ROI_GRAY_Ary Satyawan_DSC05335.JPG.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Grayscale/test/Ary Satyawan/ROI_GRAY_Ary Satyawan_DSC05335.JPG.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grayscale/gabung/Aditya Utama/ROI_GRAY_Aditya Utama_DSC06073.JPG.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grayscale/gabung/Aditya Utama/ROI_GRAY_Aditya Utama_DSC06074.JPG.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grayscale/gabung/Aditya Utama/ROI_GRAY_Aditya Utama_DSC06075.JPG.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grayscale/gabung/Aditya Utama/ROI_GRAY_Aditya Utama_DSC06076.JPG.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grayscale/gabung/Aditya Utama/ROI_GRAY_Aditya Utama_DSC06077.JPG.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grayscale/gabung/Artajaya/ROI_GRAY_Artajaya_DSC05847.JPG.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grayscale/gabung/Artajaya/ROI_GRAY_Artajaya_DSC05848.JPG.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grayscale/gabung/Artajaya/ROI_GRAY_Artajaya_DSC05849.JPG.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grayscale/gabung/Artajaya/ROI_GRAY_Artajaya_DSC05850.JPG.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grayscale/gabung/Artajaya/ROI_GRAY_Artajaya_DSC05851.JPG.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grayscale/test/Aditya Utama/ROI_GRAY_Aditya Utama_DSC06076.JPG.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grayscale/test/Aditya Utama/ROI_GRAY_Aditya Utama_DSC06077.JPG.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grayscale/test/Artajaya/ROI_GRAY_Artajaya_DSC05847.JPG.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grayscale/test/Artajaya/ROI_GRAY_Artajaya_DSC05849.JPG.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grayscale/train/Aditya Utama/ROI_GRAY_Aditya Utama_DSC06074.JPG.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grayscale/train/Aditya Utama/ROI_GRAY_Aditya Utama_DSC06075.JPG.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grayscale/train/Aditya Utama/ROI_GRAY_Aditya Utama_DSC06077.JPG.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grayscale/train/Artajaya/ROI_GRAY_Artajaya_DSC05848.JPG.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grayscale/train/Artajaya/ROI_GRAY_Artajaya_DSC05850.JPG.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grayscale/train/Artajaya/ROI_GRAY_Artajaya_DSC05851.JPG.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Prepros.py" beforeDir="false" afterPath="$PROJECT_DIR$/Prepros.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -68,8 +36,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Prepros.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="154">
-              <caret line="16" column="25" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
+            <state relative-caret-position="176">
+              <caret line="32" column="19" selection-start-line="32" selection-start-column="19" selection-end-line="32" selection-end-column="19" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
                 <element signature="e#2417#2424#0" />
@@ -302,18 +270,26 @@
       <option name="project" value="LOCAL" />
       <updated>1557244926757</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="25 class">
+      <created>1557245614704</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1557245614704</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19125395" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19125395" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32502708" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32502708" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3997833" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -331,7 +307,8 @@
     <MESSAGE value="save edit" />
     <MESSAGE value="resize" />
     <MESSAGE value="tambah file" />
-    <option name="LAST_COMMIT_MESSAGE" value="tambah file" />
+    <MESSAGE value="25 class" />
+    <option name="LAST_COMMIT_MESSAGE" value="25 class" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/haarcascade_eye.xml">
@@ -389,8 +366,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Prepros.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="16" column="25" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
+        <state relative-caret-position="176">
+          <caret line="32" column="19" selection-start-line="32" selection-start-column="19" selection-end-line="32" selection-end-column="19" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
             <element signature="e#2417#2424#0" />
