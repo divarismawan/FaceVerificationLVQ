@@ -17,7 +17,7 @@ from sklearn.decomposition import PCA
 from sklearn.svm import SVC
 from sklearn.neighbors import KNeighborsClassifier
 
-PATH = "D:/0TUGAS TI/FaceVerificationLVQ/Grayscale"
+PATH = "D:/TUGAS/FaceVerificationLVQ/Grayscale"
 cats = [cats for cats in os.listdir(PATH+"\\.")]
     
 
@@ -82,13 +82,17 @@ def main():
     print("Projecting the input data on the eigenfaces orthonormal basis")
     X_train_pca = pca.transform(X_train)
     X_test_pca = pca.transform(X_test)
-    print(X_train_pca)
 
-    # k = 5
-    # knn_model = KNeighborsClassifier(n_neighbors=k)
-    # knn_model.fit(X_train_pca, y_train)
-    #
-    # y_predict = knn_model.predict(X_test_pca)
+
+    for k in range(1,101):
+        knn_model = KNeighborsClassifier(n_neighbors=k)
+        knn_model.fit(X_train_pca, y_train)
+
+        y_predict = knn_model.predict(X_test_pca)
+        print("target: "+str(k))
+        print(y_test)
+        print("uji: "+str(k))
+        print(y_predict)
 
 
     eigenface_titles = ["eigenface %d" % i for i in range(eigenfaces.shape[0])]
