@@ -17,17 +17,18 @@ from sklearn.decomposition import PCA
 from sklearn.svm import SVC
 from sklearn.neighbors import KNeighborsClassifier
 
-PATH = "D:/TUGAS/FaceVerificationLVQ/Grayscale"
-cats = [cats for cats in os.listdir(PATH+"\\.")]
+TRAIN_PATH = "D:/Kuliah/smt 6/Teknologi  Biometrik/FaceVerificationLVQ/Grayscale/train"
+TEST_PATH = "D:/Kuliah/smt 6/Teknologi  Biometrik/FaceVerificationLVQ/Grayscale/test"
+# cats = [cats for cats in os.listdir(PATH+"\\.")]
     
 
-def append_feature():
+def append_feature(PATH):
 
     images = []
     target = []
     flatten_images = []
 
-    for i, dir_images in zip(range(10),os.listdir(PATH)):
+    for i, dir_images in zip(range(7),os.listdir(PATH)):
         for file in os.listdir(PATH+"\\{}".format(dir_images)):
             dir = os.path.join(PATH+"\\{}".format(dir_images),file)
             #get images
@@ -35,7 +36,7 @@ def append_feature():
             # tambahkan preprocessing
             flatten_images.append(img.flatten())
             images.append(img)
-            target.append(i)
+            target.append(dir_images)
 
     flatten_images = np.array(flatten_images)
     images = np.array(images)
@@ -43,7 +44,7 @@ def append_feature():
 
     return Bunch(data = flatten_images,
                 target = target,
-                target_names = cats,
+                target_names = target,
                 images = images,
                 descr = "deskripsi"
                 )
@@ -60,23 +61,37 @@ def plot_gallery(images, titles, h, w, n_row=3, n_col=4):
         plt.xticks(())
         plt.yticks(())
 
+def doPCA(image_set, h, w):
+    n_components = 20
+    pca = PCA(n_components=n_components).fit(image_set)
+    eigenfaces = pca.components_.reshape((n_components, h, w))
+
+
 def main():
 
     print("add dataset into numpy array")
-    image_dataset = append_feature()
-    print("success")
+    train_dataset = append_feature(TRAIN_PATH)
+    print("train set created successfully")
+    test_dataset = append_feature(TEST_PATH)
+    print("train set created successfully")
+    
 
-    n_samples, h, w = image_dataset.images.shape
+    n_samples, h, w = train_dataset.images.shape
 
     # X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.25, random_state=42)
-    X_train, X_test, y_train, y_test = train_test_split(image_dataset.data, image_dataset.target, test_size=0.1)
+    # X_train, X_test, y_train, y_test = train_test_split(image_dataset.data, image_dataset.target, test_size=0.1)
+    X_train = train_dataset.data
+    y_train = train_dataset.target
 
-    print(type(X_train))
+    X_test = test_dataset.data
+    y_test = test_dataset.target
 
-    n_components = 40
+    print(y_train)
+    print(y_test)
 
+
+    n_components = 21
     pca = PCA(n_components=n_components).fit(X_train)
-
     eigenfaces = pca.components_.reshape((n_components, h, w))
 
     print("Projecting the input data on the eigenfaces orthonormal basis")
@@ -84,15 +99,15 @@ def main():
     X_test_pca = pca.transform(X_test)
 
 
-    for k in range(1,101):
-        knn_model = KNeighborsClassifier(n_neighbors=k)
-        knn_model.fit(X_train_pca, y_train)
+    # for k in range(1,101):
+    #     knn_model = KNeighborsClassifier(n_neighbors=k)
+    #     knn_model.fit(X_train_pca, y_train)
 
-        y_predict = knn_model.predict(X_test_pca)
-        print("target: "+str(k))
-        print(y_test)
-        print("uji: "+str(k))
-        print(y_predict)
+    #     y_predict = knn_model.predict(X_test_pca)
+    #     print("target: "+str(k))
+    #     print(y_test)
+    #     print("uji: "+str(k))
+    #     print(y_predict)
 
 
     eigenface_titles = ["eigenface %d" % i for i in range(eigenfaces.shape[0])]
