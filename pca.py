@@ -31,7 +31,7 @@ def append_feature(PATH):
     target = []
     flatten_images = []
 
-    for i, dir_images in zip(range(7),os.listdir(PATH)):
+    for i, dir_images in zip(range(25),os.listdir(PATH)):
         for file in os.listdir(PATH+"\\{}".format(dir_images)):
             dir = os.path.join(PATH+"\\{}".format(dir_images),file)
             #get images
@@ -77,7 +77,7 @@ def main():
     print("train set created successfully")
     test_dataset = append_feature(TEST_PATH)
     print("train set created successfully")
-    
+
 
     n_samples, h, w = train_dataset.images.shape
 
@@ -104,7 +104,7 @@ def main():
 
     # ni paling banyak benarnya dari 1-10 k nya
 
-    k = 5
+    k=1
     knn_model = KNeighborsClassifier(n_neighbors=k)
     model_save = knn_model.fit(X_train_pca, y_train)
     saved_model = pickle.dumps (model_save)
@@ -127,7 +127,9 @@ def main():
     benar = 24 - salah
     akurasi = benar/24 * 100
     print("benar ="+str(benar))
-    print("\nakurasi ="+str(akurasi))
+    print("akurasi ="+str(akurasi))
+    # print(confusion_matrix(y_test, y_predict))
+    print(classification_report(y_test, y_predict))
 
     eigenface_titles = ["eigenface %d" % i for i in range(eigenfaces.shape[0])]
     plot_gallery(eigenfaces, eigenface_titles, h, w)
