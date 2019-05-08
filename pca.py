@@ -1,5 +1,8 @@
 from __future__ import print_function
 
+import pickle
+
+
 import numpy as np
 from time import time
 import logging
@@ -103,9 +106,13 @@ def main():
 
     k = 5
     knn_model = KNeighborsClassifier(n_neighbors=k)
-    knn_model.fit(X_train_pca, y_train)
+    model_save = knn_model.fit(X_train_pca, y_train)
+    saved_model = pickle.dumps (model_save)
+    knn_from_pickle = pickle.loads (saved_model)
+    # print(model_save)
 
-    y_predict = knn_model.predict(X_test_pca)
+
+    y_predict = knn_from_pickle.predict(X_test_pca)
     # print(accuracy_score(y_test, y_predict))
     salah = 0
     # print("target: "+str(k))
@@ -117,8 +124,8 @@ def main():
         if (y_test[i]!=y_predict[i]):
             salah+=1
 
-    benar = 13 - salah
-    akurasi = benar/13 * 100
+    benar = 24 - salah
+    akurasi = benar/24 * 100
     print("benar ="+str(benar))
     print("\nakurasi ="+str(akurasi))
 
