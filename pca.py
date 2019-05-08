@@ -93,7 +93,7 @@ def main():
     # print(y_test)
 
 
-    n_components = 21
+    n_components = 22
     pca = PCA(n_components=n_components).fit(X_train)
     eigenfaces = pca.components_.reshape((n_components, h, w))
 
@@ -107,8 +107,9 @@ def main():
     k=1
     knn_model = KNeighborsClassifier(n_neighbors=k)
     model_save = knn_model.fit(X_train_pca, y_train)
-    saved_model = pickle.dumps (model_save)
-    knn_from_pickle = pickle.loads (saved_model)
+    saved_model = pickle.dumps(model_save)
+    knn_from_pickle = pickle.loads(saved_model)
+
     # print(model_save)
 
 
@@ -124,8 +125,10 @@ def main():
         if (y_test[i]!=y_predict[i]):
             salah+=1
 
-    benar = 24 - salah
-    akurasi = benar/24 * 100
+    benar = len(y_predict) - salah
+    akurasi = benar/len(y_predict) * 100
+    print("jumlah ="+str(len(y_predict)))
+    print("salah ="+str(salah))
     print("benar ="+str(benar))
     print("akurasi ="+str(akurasi))
     # print(confusion_matrix(y_test, y_predict))
