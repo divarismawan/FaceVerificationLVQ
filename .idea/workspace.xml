@@ -3,24 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="a1fe8ec0-3a3c-4166-b08b-7cceb7d39607" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Grayscale/gabung/Ary Satyawan/ROI_GRAY_Ary Satyawan_DSC05335.JPG.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Grayscale/gabung/Ary Satyawan/ROI_GRAY_Ary Satyawan_DSC05335.JPG.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Grayscale/gabung/Budastra/ROI_GRAY_Budastra_DSC05566.JPG.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Grayscale/gabung/Budastra/ROI_GRAY_Budastra_DSC05567.JPG.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Grayscale/gabung/Budastra/ROI_GRAY_Budastra_DSC05568.JPG.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Grayscale/gabung/Budastra/ROI_GRAY_Budastra_DSC05569.JPG.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Grayscale/gabung/Budastra/ROI_GRAY_Budastra_DSC05570.JPG.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Grayscale/test/Ade Yuli/ROI_GRAY_Ade Yuli_DSC05253.JPG.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Grayscale/test/Adhi Pramudya/ROI_GRAY_Adhi Pramudya_DSC05283.JPG.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Grayscale/test/Adi Widhiantara/ROI_GRAY_Adi Widhiantara_DSC05123.JPG.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Grayscale/test/Agung Meidi/ROI_GRAY_Agung Meidi_DSC05580.JPG.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Grayscale/test/Budastra/ROI_GRAY_Budastra_DSC05567.JPG.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Grayscale/test/Budastra/ROI_GRAY_Budastra_DSC05569.JPG.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Grayscale/train/Adhi Pramudya/ROI_GRAY_Adhi Pramudya_DSC05280.JPG.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Grayscale/train/Adi Widhiantara/ROI_GRAY_Adi Widhiantara_DSC05120.JPG.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Grayscale/train/Agung Meidi/ROI_GRAY_Agung Meidi_DSC05577.JPG.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Grayscale/train/Budastra/ROI_GRAY_Budastra_DSC05566.JPG.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Grayscale/train/Budastra/ROI_GRAY_Budastra_DSC05568.JPG.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Grayscale/train/Budastra/ROI_GRAY_Budastra_DSC05570.JPG.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Prepros.py" beforeDir="false" afterPath="$PROJECT_DIR$/Prepros.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -34,8 +16,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Prepros.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-594">
-              <caret line="17" selection-start-line="17" selection-end-line="17" />
+            <state relative-caret-position="242">
+              <caret line="34" column="17" selection-start-line="34" selection-start-column="17" selection-end-line="34" selection-end-column="17" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -55,7 +37,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pca.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2376">
+            <state relative-caret-position="2310">
               <caret line="125" column="20" selection-start-line="125" selection-start-column="20" selection-end-line="125" selection-end-column="20" />
               <folding>
                 <element signature="e#0#37#0" expanded="true" />
@@ -104,7 +86,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -121,6 +102,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -270,7 +252,21 @@
       <option name="project" value="LOCAL" />
       <updated>1557248242697</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="ganti gambar">
+      <created>1557291916158</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1557291916159</updated>
+    </task>
+    <task id="LOCAL-00008" summary="ganti gambar">
+      <created>1557292048027</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1557292048027</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -287,7 +283,7 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.32936078" />
       <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Python Console" order="10" />
@@ -301,7 +297,8 @@
     <MESSAGE value="resize" />
     <MESSAGE value="tambah file" />
     <MESSAGE value="25 class" />
-    <option name="LAST_COMMIT_MESSAGE" value="25 class" />
+    <MESSAGE value="ganti gambar" />
+    <option name="LAST_COMMIT_MESSAGE" value="ganti gambar" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/haarcascade_eye.xml">
@@ -342,8 +339,8 @@
     <entry file="file://$PROJECT_DIR$/venv/lvq.py" />
     <entry file="file://$PROJECT_DIR$/Prepros.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-594">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        <state relative-caret-position="242">
+          <caret line="34" column="17" selection-start-line="34" selection-start-column="17" selection-end-line="34" selection-end-column="17" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
           </folding>
@@ -359,7 +356,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pca.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2376">
+        <state relative-caret-position="2310">
           <caret line="125" column="20" selection-start-line="125" selection-start-column="20" selection-end-line="125" selection-end-column="20" />
           <folding>
             <element signature="e#0#37#0" expanded="true" />
