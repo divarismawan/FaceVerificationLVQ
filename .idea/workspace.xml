@@ -16,8 +16,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Prepros.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="242">
-              <caret line="34" column="17" selection-start-line="34" selection-start-column="17" selection-end-line="34" selection-end-column="17" />
+            <state relative-caret-position="462">
+              <caret line="72" column="48" selection-start-line="72" selection-start-column="48" selection-end-line="72" selection-end-column="48" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -97,6 +97,11 @@
               <item name="FaceVerificationLVQ" type="b2602c69:ProjectViewProjectNode" />
               <item name="FaceVerificationLVQ" type="462c0819:PsiDirectoryNode" />
               <item name="Dataset" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FaceVerificationLVQ" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FaceVerificationLVQ" type="462c0819:PsiDirectoryNode" />
+              <item name="Grayscale" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -266,7 +271,21 @@
       <option name="project" value="LOCAL" />
       <updated>1557292048027</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="tambah file uji">
+      <created>1557424399266</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1557424399266</updated>
+    </task>
+    <task id="LOCAL-00010" summary="tambah file uji">
+      <created>1557424632580</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1557424632580</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -298,7 +317,8 @@
     <MESSAGE value="tambah file" />
     <MESSAGE value="25 class" />
     <MESSAGE value="ganti gambar" />
-    <option name="LAST_COMMIT_MESSAGE" value="ganti gambar" />
+    <MESSAGE value="tambah file uji" />
+    <option name="LAST_COMMIT_MESSAGE" value="tambah file uji" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/haarcascade_eye.xml">
@@ -339,8 +359,8 @@
     <entry file="file://$PROJECT_DIR$/venv/lvq.py" />
     <entry file="file://$PROJECT_DIR$/Prepros.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="34" column="17" selection-start-line="34" selection-start-column="17" selection-end-line="34" selection-end-column="17" />
+        <state relative-caret-position="462">
+          <caret line="72" column="48" selection-start-line="72" selection-start-column="48" selection-end-line="72" selection-end-column="48" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
           </folding>

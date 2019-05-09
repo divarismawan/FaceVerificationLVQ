@@ -56,20 +56,29 @@ for folder in classes:
 
                 for (x, y, w, h) in faces:
                     cv2.rectangle(contrast_img, (x, y), (x + w, y + h), (255, 0, 0), 0)
-                    roi_gray = contrast_img[y:y + h, x:x + w]
+
+                    # roi_gray =contrast_img[y:h//2 - 300//2,  x:w//2 -300//2]
+                    # roi_color =contrast_img[y:h//2 - 300//2,  x:w//2 - 300//2]
+
+                    roi_gray = contrast_img[y:y + h, x:x+ w]
                     roi_color = contrast_img[y:y + h, x:x + w]
 
                 dim = (300, 300)
+                crop_size =  300
                 gray = cv2.cvtColor(roi_color, cv2.COLOR_BGR2GRAY)
                 resized_gray = cv2.resize(gray, dim, interpolation=cv2.INTER_AREA)
 
-                # cv2.imshow("grayscale", gray)
-                # cv2.waitKey(0)
+                # gray = roi_color.crop(( w// 2 - 50 // 2, h // 2 - 50 // 2, w // 2 + 50 // 2, h // 2 + 50 // 2))
 
-                hasil  = url_tujuan + folder + '/ROI_GRAY_{}_{}.jpg'.format(folder, img)
-                hasil2 = url_gabung + folder + '/ROI_GRAY_{}_{}.jpg'.format(folder, img)
-                cv2.imwrite(hasil, resized_gray)
-                cv2.imwrite(hasil2, resized_gray)
+                cv2.imshow("grayscale", roi_gray)
+                cv2.waitKey(0)
+
+
+
+                # hasil  = url_tujuan + folder + '/ROI_GRAY_{}_{}.jpg'.format(folder, img)
+                # hasil2 = url_gabung + folder + '/ROI_GRAY_{}_{}.jpg'.format(folder, img)
+                # cv2.imwrite(hasil, resized_gray)
+                # cv2.imwrite(hasil2, resized_gray)
 
             print("{} gambar {} tersimpan".format(folder, img))
 
