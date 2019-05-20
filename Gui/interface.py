@@ -5,8 +5,13 @@
 # Created by: PyQt5 UI code generator 5.11.3
 #
 # WARNING! All changes made in this file will be lost!
+import cv2
+import os
 
 from PyQt5 import QtCore, QtGui, QtWidgets
+from PyQt5.QtGui import QPixmap
+from PyQt5.QtWidgets import QFileDialog, QLabel
+
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -19,12 +24,12 @@ class Ui_MainWindow(object):
         self.frame.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame.setObjectName("frame")
-        self.textEdit = QtWidgets.QTextEdit(self.frame)
-        self.textEdit.setGeometry(QtCore.QRect(40, 100, 301, 41))
+        self.textLatih = QtWidgets.QTextEdit(self.frame)
+        self.textLatih.setGeometry(QtCore.QRect(40, 100, 301, 41))
         font = QtGui.QFont()
         font.setPointSize(12)
-        self.textEdit.setFont(font)
-        self.textEdit.setObjectName("textEdit")
+        self.textLatih.setFont(font)
+        self.textLatih.setObjectName("textLatih")
         self.label = QtWidgets.QLabel(self.frame)
         self.label.setGeometry(QtCore.QRect(310, 20, 711, 51))
         font = QtGui.QFont()
@@ -37,12 +42,12 @@ class Ui_MainWindow(object):
         font.setPointSize(12)
         self.label_2.setFont(font)
         self.label_2.setObjectName("label_2")
-        self.pushButton = QtWidgets.QPushButton(self.frame)
-        self.pushButton.setGeometry(QtCore.QRect(350, 100, 141, 41))
+        self.btnLoadLatih = QtWidgets.QPushButton(self.frame)
+        self.btnLoadLatih.setGeometry(QtCore.QRect(350, 100, 141, 41))
         font = QtGui.QFont()
         font.setPointSize(12)
-        self.pushButton.setFont(font)
-        self.pushButton.setObjectName("pushButton")
+        self.btnLoadLatih.setFont(font)
+        self.btnLoadLatih.setObjectName("btnLoadLatih")
         self.pushButton_4 = QtWidgets.QPushButton(self.frame)
         self.pushButton_4.setGeometry(QtCore.QRect(1130, 110, 141, 41))
         font = QtGui.QFont()
@@ -73,12 +78,12 @@ class Ui_MainWindow(object):
         font.setPointSize(14)
         self.label_6.setFont(font)
         self.label_6.setObjectName("label_6")
-        self.textEdit_2 = QtWidgets.QTextEdit(self.frame)
-        self.textEdit_2.setGeometry(QtCore.QRect(40, 550, 301, 41))
+        self.textUji = QtWidgets.QTextEdit(self.frame)
+        self.textUji.setGeometry(QtCore.QRect(40, 550, 301, 41))
         font = QtGui.QFont()
         font.setPointSize(13)
-        self.textEdit_2.setFont(font)
-        self.textEdit_2.setObjectName("textEdit_2")
+        self.textUji.setFont(font)
+        self.textUji.setObjectName("textUji")
         self.label_7 = QtWidgets.QLabel(self.frame)
         self.label_7.setGeometry(QtCore.QRect(40, 530, 111, 16))
         font = QtGui.QFont()
@@ -138,7 +143,7 @@ class Ui_MainWindow(object):
         MainWindow.setWindowTitle(_translate("MainWindow", "Interface Program"))
         self.label.setText(_translate("MainWindow", "KLASIFIKASI WAJAH MENGGUNAKAN K-NN"))
         self.label_2.setText(_translate("MainWindow", "Load Data Latih"))
-        self.pushButton.setText(_translate("MainWindow", "Load"))
+        self.btnLoadLatih.setText(_translate("MainWindow", "Load"))
         self.pushButton_4.setText(_translate("MainWindow", "Tampilkan"))
         self.label_3.setText(_translate("MainWindow", "Citra Asli"))
         self.label_4.setText(_translate("MainWindow", "ROI"))
@@ -149,6 +154,30 @@ class Ui_MainWindow(object):
         self.pushButton_3.setText(_translate("MainWindow", "Proses"))
         self.menuHome.setTitle(_translate("MainWindow", "Home"))
         self.actionexit.setText(_translate("MainWindow", "exit"))
+
+
+        self.btnLoadLatih.clicked.connect(lambda: self.loadPathTrain())
+
+        self.pushButton_4.clicked.connect(lambda : self.preprosImage())
+
+    def loadPathTrain(self):
+        file_path = str(QFileDialog.getExistingDirectory(None, "Select Directory"))
+        self.textLatih.setText(file_path)
+        print("File path : {}".format(file_path))
+
+    def preprosImage(self):
+        get_path = self.textLatih.toPlainText()
+        for folder in os.listdir(get_path):
+            path = os.path.join(get_path, folder)
+            for i in range(2):
+                for img in os.listdir(path):
+                    dir_img = (os.path.join(path, img))
+
+                    img_gui = QtGui.QImage(dir_img)
+                    pixmap  = QtGui.QPixmap.fromImage(img_gui)
+
+                    self.label_3.setPixmap(pixmap)
+
 
 
 if __name__ == "__main__":

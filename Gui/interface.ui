@@ -29,7 +29,7 @@
     <property name="frameShadow">
      <enum>QFrame::Raised</enum>
     </property>
-    <widget class="QTextEdit" name="textEdit">
+    <widget class="QTextEdit" name="textLatih">
      <property name="geometry">
       <rect>
        <x>40</x>
@@ -80,7 +80,7 @@
       <string>Load Data Latih</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="pushButton">
+    <widget class="QPushButton" name="btnLoadLatih">
      <property name="geometry">
       <rect>
        <x>350</x>
@@ -188,7 +188,7 @@
       <string>Eigenface</string>
      </property>
     </widget>
-    <widget class="QTextEdit" name="textEdit_2">
+    <widget class="QTextEdit" name="textUji">
      <property name="geometry">
       <rect>
        <x>40</x>
@@ -310,6 +310,38 @@
        <width>300</width>
        <height>300</height>
       </rect>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_img_ori">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>40</x>
+       <y>180</y>
+       <width>300</width>
+       <height>300</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>TextLabel</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_img_gray">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>350</x>
+       <y>180</y>
+       <width>300</width>
+       <height>300</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>TextLabel</string>
      </property>
     </widget>
    </widget>

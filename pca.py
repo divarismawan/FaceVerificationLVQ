@@ -31,7 +31,7 @@ def append_feature(PATH):
     target = []
     flatten_images = []
 
-    for i, dir_images in zip(range(25),os.listdir(PATH)):
+    for i, dir_images in zip(range(30),os.listdir(PATH)):
         for file in os.listdir(PATH+"\\{}".format(dir_images)):
             dir = os.path.join(PATH+"\\{}".format(dir_images),file)
             #get images
@@ -93,7 +93,7 @@ def main():
     # print(y_test)
 
 
-    n_components = 22
+    n_components = 70
     pca = PCA(n_components=n_components).fit(X_train)
     eigenfaces = pca.components_.reshape((n_components, h, w))
 
@@ -137,7 +137,7 @@ def main():
     eigenface_titles = ["eigenface %d" % i for i in range(eigenfaces.shape[0])]
     plot_gallery(eigenfaces, eigenface_titles, h, w)
 
-    # plt.show()
+    plt.show()
 
 
 if __name__ == "__main__":

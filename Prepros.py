@@ -32,7 +32,7 @@ for folder in classes:
     count_file += 1
     # Cek if file already exist
     if(count_file > 42 and count_file <100):
-        if(folder in gray_class):
+        if(folder == ""):
 
             # check_folder(folder)
 
@@ -70,7 +70,9 @@ for folder in classes:
 
                 # gray = roi_color.crop(( w// 2 - 50 // 2, h // 2 - 50 // 2, w // 2 + 50 // 2, h // 2 + 50 // 2))
 
-                cv2.imshow("grayscale", roi_gray)
+                cv2.imshow("original", img_array)
+                cv2.imshow("ROI", roi_gray)
+                cv2.imshow("grayscale", gray)
                 cv2.waitKey(0)
 
 
