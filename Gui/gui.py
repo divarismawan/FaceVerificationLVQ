@@ -25,14 +25,19 @@ from pca import *
 TRAIN_PATH = "D:/Tugas dan Materi/Semester 6/Teknologi Biometrika/Verifikasi Wajah/FaceVerificationLVQ/Grayscale/train"
 TEST_PATH = "D:/Tugas dan Materi/Semester 6/Teknologi Biometrika/Verifikasi Wajah/FaceVerificationLVQ/Grayscale/test"
 
+from PyQt5 import QtCore, QtGui, QtWidgets
+
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(1340, 975)
+        MainWindow.resize(1322, 975)
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.Image = QtWidgets.QFrame(self.centralwidget)
-        self.Image.setGeometry(QtCore.QRect(10, 10, 1311, 941))
+        self.Image.setGeometry(QtCore.QRect(10, 10, 1311, 931))
+        font = QtGui.QFont()
+        font.setPointSize(12)
+        self.Image.setFont(font)
         self.Image.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.Image.setFrameShadow(QtWidgets.QFrame.Raised)
         self.Image.setObjectName("Image")
@@ -84,12 +89,6 @@ class Ui_MainWindow(object):
         font.setPointSize(12)
         self.label_7.setFont(font)
         self.label_7.setObjectName("label_7")
-        self.linePengujian = QtWidgets.QLineEdit(self.Image)
-        self.linePengujian.setGeometry(QtCore.QRect(40, 600, 1221, 321))
-        font = QtGui.QFont()
-        font.setPointSize(12)
-        self.linePengujian.setFont(font)
-        self.linePengujian.setObjectName("linePengujian")
         self.label_2 = QtWidgets.QLabel(self.Image)
         self.label_2.setGeometry(QtCore.QRect(40, 560, 191, 51))
         font = QtGui.QFont()
@@ -137,9 +136,13 @@ class Ui_MainWindow(object):
         font.setPointSize(12)
         self.btnUji.setFont(font)
         self.btnUji.setObjectName("btnUji")
+        self.labelUji = QtWidgets.QLabel(self.Image)
+        self.labelUji.setGeometry(QtCore.QRect(40, 590, 1221, 311))
+        self.labelUji.setAlignment(QtCore.Qt.AlignLeading | QtCore.Qt.AlignLeft | QtCore.Qt.AlignTop)
+        self.labelUji.setObjectName("labelUji")
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 1340, 21))
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 1322, 21))
         self.menubar.setObjectName("menubar")
         self.menuHome = QtWidgets.QMenu(self.menubar)
         self.menuHome.setObjectName("menuHome")
@@ -167,8 +170,13 @@ class Ui_MainWindow(object):
         self.label_7.setText(_translate("MainWindow", "Load Data Uji"))
         self.btnEigen.setText(_translate("MainWindow", "Eigen"))
         self.btnUji.setText(_translate("MainWindow", "Pengujian"))
+        self.labelUji.setText(_translate("MainWindow", "TextLabel"))
         self.menuHome.setTitle(_translate("MainWindow", "Home"))
         self.actionexit.setText(_translate("MainWindow", "exit"))
+
+        self.btnProses.clicked.connect(self.preprosImage)
+        self.btnLoadData.clicked.connect(self.loadPathTrain)
+        self.btnEigen.clicked.connect(self.pca)
 
     def loadPathTrain(self):
         file_path = str(QFileDialog.getExistingDirectory(None, "Select Directory"))
@@ -178,39 +186,127 @@ class Ui_MainWindow(object):
 
     def preprosImage(self):
         get_path = self.inputDataUji.toPlainText()
+        if(get_path !=''):
+            for folder in os.listdir(get_path):
+                path = os.path.join(get_path, folder)
+                for i in range(2):
+                    for img in os.listdir(path):
+                        # print(img)
+                        path_image = (os.path.join(path, img))
+                        # Citra Asli
+                        img_gui = QtGui.QImage(path_image)
+                        pixmap = QtGui.QPixmap.fromImage(img_gui)
 
-        for folder in os.listdir(get_path):
-            path = os.path.join(get_path, folder)
-            for i in range(2):
-                for img in os.listdir(path):
-                    # print(img)
-                    path_image = (os.path.join(path, img))
-                    # Citra Asli
-                    img_gui = QtGui.QImage(path_image)
-                    pixmap = QtGui.QPixmap.fromImage(img_gui)
+                        self.label_asli.setPixmap(pixmap)
 
-                    self.label_asli.setPixmap(pixmap)
+                        # ROI
+                        img_roi = Prepros.roi_img(path_image)
 
-                    # ROI
-                    img_roi = Prepros.roi_img(path_image)
+                        # print(img_roi.shape)
+                        height, width, channel = img_roi.shape
+                        bytesPerLine = 3 * width
+                        qImg = QImage(img_roi.data, width, height, bytesPerLine, QImage.Format_RGB888).rgbSwapped()
+                        roi_map = QPixmap(qImg)
+                        self.label_roi.setPixmap(roi_map)
 
-                    # print(img_roi.shape)
-                    height, width, channel = img_roi.shape
-                    bytesPerLine = 3 * width
-                    qImg = QImage(img_roi.data, width, height, bytesPerLine, QImage.Format_RGB888).rgbSwapped()
-                    roi_map = QPixmap(qImg)
-                    self.label_roi.setPixmap(roi_map)
+                        # Grayscale
+                        img_gray = Prepros.imgGray(img_roi)
+                        height, width = img_gray.shape
+                        img_gray = QtGui.QImage(img_gray, width, height, QtGui.QImage.Format_Grayscale8)
+                        img = QtGui.QPixmap.fromImage(img_gray)
+                        self.label_gray.setPixmap(img)
 
-                    # Grayscale
-                    img_gray = Prepros.imgGray(img_roi)
-                    height, width = img_gray.shape
-                    img_gray = QtGui.QImage(img_gray, width, height, QtGui.QImage.Format_Grayscale8)
-                    img = QtGui.QPixmap.fromImage(img_gray)
-                    self.label_gray.setPixmap(img)
 
-        main()
 
     def pca(self):
+        if(self.inputDataUji.toPlainText() !=''):
+            print("add dataset into numpy array")
+            train_dataset = append_feature(TRAIN_PATH)
+            print("train set created successfully")
+            test_dataset = append_feature(TEST_PATH)
+            print("train set created successfully")
+
+            n_samples, h, w = train_dataset.images.shape
+
+            X_train = train_dataset.data
+            y_train = train_dataset.target
+
+            X_test = test_dataset.data
+            y_test = test_dataset.target
+
+            n_components = 70
+            pca = PCA(n_components=n_components).fit(X_train)
+            eigenfaces = pca.components_.reshape((n_components, h, w))
+
+            print("Projecting the input data on the eigenfaces orthonormal basis")
+            X_train_pca = pca.transform(X_train)
+            X_test_pca = pca.transform(X_test)
+
+            eigenface_titles = ["eigenface %d" % i for i in range(eigenfaces.shape[0])]
+            plot_gallery(eigenfaces, eigenface_titles, h, w)
+            plt.show()
+
+            k = 2
+            knn_model = KNeighborsClassifier(n_neighbors=k)
+            model_save = knn_model.fit(X_train_pca, y_train)
+            saved_model = pickle.dumps(model_save)
+            knn_from_pickle = pickle.loads(saved_model)
+
+            # print(model_save)
+
+            y_predict = knn_from_pickle.predict(X_test_pca)
+            self.labelUji.setText(classification_report(y_test, y_predict))
+            # print(classification_report(y_test, y_predict))
+            # salah = 0
+            # print("target: "+str(k))
+            # for i in range(0, len(y_predict)):
+            # print(str(i) + ". " + str(y_test[i]))
+            # print("uji: "+str(k))
+            # print(str(i) + ". " + str(y_predict[i]))
+            # print("\n")
+            # if (y_test[i] != y_predict[i]):
+            # salah += 1
+
+    def append_feature(PATH):
+
+        images = []
+        target = []
+        flatten_images = []
+
+        for i, dir_images in zip(range(30), os.listdir(PATH)):
+            for file in os.listdir(PATH + "\\{}".format(dir_images)):
+                dir = os.path.join(PATH + "\\{}".format(dir_images), file)
+                # get images
+                img = cv2.imread(dir, 0)
+                # tambahkan preprocessing
+                flatten_images.append(img.flatten())
+                images.append(img)
+                target.append(dir_images)
+
+        flatten_images = np.array(flatten_images)
+        images = np.array(images)
+        target = np.array(target)
+
+        return Bunch(data=flatten_images,
+                     target=target,
+                     target_names=target,
+                     images=images,
+                     descr="deskripsi"
+                     )
+        pass
+
+    def plot_gallery(images, titles, h, w, n_row=3, n_col=4):
+        """Helper function to plot a gallery of portraits"""
+        plt.figure(figsize=(1.8 * n_col, 2.4 * n_row))
+        plt.subplots_adjust(bottom=0, left=.01, right=.99, top=.90, hspace=.35)
+        for i in range(n_row * n_col):
+            plt.subplot(n_row, n_col, i + 1)
+            plt.imshow(images[i].reshape((h, w)), cmap=plt.cm.gray)
+            plt.title(titles[i], size=12)
+            plt.xticks(())
+            plt.yticks(())
+
+    def main():
         print("add dataset into numpy array")
         train_dataset = append_feature(TRAIN_PATH)
         print("train set created successfully")
@@ -219,11 +315,16 @@ class Ui_MainWindow(object):
 
         n_samples, h, w = train_dataset.images.shape
 
+        # X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.25, random_state=42)
+        # X_train, X_test, y_train, y_test = train_test_split(image_dataset.data, image_dataset.target, test_size=0.1)
         X_train = train_dataset.data
         y_train = train_dataset.target
 
         X_test = test_dataset.data
         y_test = test_dataset.target
+
+        # print(y_train)
+        # print(y_test)
 
         n_components = 70
         pca = PCA(n_components=n_components).fit(X_train)
@@ -234,7 +335,9 @@ class Ui_MainWindow(object):
         X_test_pca = pca.transform(X_test)
 
         eigenface_titles = ["eigenface %d" % i for i in range(eigenfaces.shape[0])]
+        # print(eigenfaces.shape[0])
         plot_gallery(eigenfaces, eigenface_titles, h, w)
+        # plt.imshow(eigenfaces.shape[0])
         plt.show()
 
         k = 2
@@ -250,106 +353,16 @@ class Ui_MainWindow(object):
         # salah = 0
         # print("target: "+str(k))
         # for i in range(0, len(y_predict)):
-            # print(str(i) + ". " + str(y_test[i]))
-            # print("uji: "+str(k))
-            # print(str(i) + ". " + str(y_predict[i]))
-            # print("\n")
-            # if (y_test[i] != y_predict[i]):
-                # salah += 1
+        #     print(str(i) + ". " + str(y_test[i]))
+        #     # print("uji: "+str(k))
+        #     print(str(i) + ". " + str(y_predict[i]))
+        #     print("\n")
+        #     if (y_test[i] != y_predict[i]):
+        #         salah += 1
+# import note_rc
+import picture_rc
 
 
-def append_feature(PATH):
-
-    images = []
-    target = []
-    flatten_images = []
-
-    for i, dir_images in zip(range(30),os.listdir(PATH)):
-        for file in os.listdir(PATH+"\\{}".format(dir_images)):
-            dir = os.path.join(PATH+"\\{}".format(dir_images),file)
-            #get images
-            img = cv2.imread(dir,0)
-            # tambahkan preprocessing
-            flatten_images.append(img.flatten())
-            images.append(img)
-            target.append(dir_images)
-
-    flatten_images = np.array(flatten_images)
-    images = np.array(images)
-    target = np.array(target)
-
-    return Bunch(data = flatten_images,
-                target = target,
-                target_names = target,
-                images = images,
-                descr = "deskripsi"
-                )
-    pass
-
-def plot_gallery(images, titles, h, w, n_row=3, n_col=4):
-    """Helper function to plot a gallery of portraits"""
-    plt.figure(figsize=(1.8 * n_col, 2.4 * n_row))
-    plt.subplots_adjust(bottom=0, left=.01, right=.99, top=.90, hspace=.35)
-    for i in range(n_row * n_col):
-        plt.subplot(n_row, n_col, i + 1)
-        plt.imshow(images[i].reshape((h, w)), cmap=plt.cm.gray)
-        plt.title(titles[i], size=12)
-        plt.xticks(())
-        plt.yticks(())
-
-def main():
-    print("add dataset into numpy array")
-    train_dataset = append_feature(TRAIN_PATH)
-    print("train set created successfully")
-    test_dataset = append_feature(TEST_PATH)
-    print("train set created successfully")
-
-    n_samples, h, w = train_dataset.images.shape
-
-    # X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.25, random_state=42)
-    # X_train, X_test, y_train, y_test = train_test_split(image_dataset.data, image_dataset.target, test_size=0.1)
-    X_train = train_dataset.data
-    y_train = train_dataset.target
-
-    X_test = test_dataset.data
-    y_test = test_dataset.target
-
-    # print(y_train)
-    # print(y_test)
-
-    n_components = 70
-    pca = PCA(n_components=n_components).fit(X_train)
-    eigenfaces = pca.components_.reshape((n_components, h, w))
-
-    print("Projecting the input data on the eigenfaces orthonormal basis")
-    X_train_pca = pca.transform(X_train)
-    X_test_pca = pca.transform(X_test)
-
-    eigenface_titles = ["eigenface %d" % i for i in range(eigenfaces.shape[0])]
-    # print(eigenfaces.shape[0])
-    plot_gallery(eigenfaces, eigenface_titles, h, w)
-    # plt.imshow(eigenfaces.shape[0])
-    plt.show()
-
-    k = 2
-    knn_model = KNeighborsClassifier(n_neighbors=k)
-    model_save = knn_model.fit(X_train_pca, y_train)
-    saved_model = pickle.dumps(model_save)
-    knn_from_pickle = pickle.loads(saved_model)
-
-    # print(model_save)
-
-    y_predict = knn_from_pickle.predict(X_test_pca)
-    print(classification_report(y_test, y_predict))
-    # salah = 0
-    # print("target: "+str(k))
-    # for i in range(0, len(y_predict)):
-    #     print(str(i) + ". " + str(y_test[i]))
-    #     # print("uji: "+str(k))
-    #     print(str(i) + ". " + str(y_predict[i]))
-    #     print("\n")
-    #     if (y_test[i] != y_predict[i]):
-    #         salah += 1
 
 if __name__ == "__main__":
     import sys

@@ -112,6 +112,8 @@ def main():
     # plt.imshow(eigenfaces.shape[0])
     plt.show()
 
+
+
 def knn(X_train_pca, y_train, X_test_pca, y_test):
 
     # ni paling banyak benarnya dari 1-10 k nya
