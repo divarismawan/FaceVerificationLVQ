@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'interface.ui'
+# Form implementation generated from reading ui file 'gui.ui'
 #
 # Created by: PyQt5 UI code generator 5.11.3
 #
@@ -30,7 +30,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(1322, 1020)
+        MainWindow.resize(1322, 997)
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.Image = QtWidgets.QFrame(self.centralwidget)
@@ -137,9 +137,9 @@ class Ui_MainWindow(object):
         self.btnUji.setFont(font)
         self.btnUji.setObjectName("btnUji")
         self.textUji = QtWidgets.QTextEdit(self.Image)
-        self.textUji.setGeometry(QtCore.QRect(370, 570, 520, 400))
-        self.textUji.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTop)
+        self.textUji.setGeometry(QtCore.QRect(380, 580, 551, 331))
         self.textUji.viewport().setProperty("cursor", QtGui.QCursor(QtCore.Qt.ForbiddenCursor))
+        self.textUji.setLayoutDirection(QtCore.Qt.RightToLeft)
         self.textUji.setObjectName("textUji")
         self.label_6 = QtWidgets.QLabel(self.Image)
         self.label_6.setGeometry(QtCore.QRect(190, 720, 61, 21))
@@ -161,6 +161,23 @@ class Ui_MainWindow(object):
         font.setWeight(75)
         self.label_9.setFont(font)
         self.label_9.setObjectName("label_9")
+        self.scrollArea = QtWidgets.QScrollArea(self.Image)
+        self.scrollArea.setGeometry(QtCore.QRect(390, 590, 531, 311))
+        self.scrollArea.setWidgetResizable(True)
+        self.scrollArea.setObjectName("scrollArea")
+        self.scrollAreaWidgetContents = QtWidgets.QWidget()
+        self.scrollAreaWidgetContents.setGeometry(QtCore.QRect(0, 0, 529, 309))
+        self.scrollAreaWidgetContents.setObjectName("scrollAreaWidgetContents")
+        self.label_10 = QtWidgets.QLabel(self.scrollAreaWidgetContents)
+        self.label_10.setGeometry(QtCore.QRect(10, 10, 501, 291))
+        font = QtGui.QFont()
+        font.setPointSize(14)
+        self.label_10.setFont(font)
+        self.label_10.setText("")
+        self.label_10.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignTop)
+        self.label_10.setObjectName("label_10")
+        self.scrollArea.setWidget(self.label_10)
+        self.label_10.setAlignment(QtCore.Qt.AlignAbsolute)
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
         self.menubar.setGeometry(QtCore.QRect(0, 0, 1322, 21))
@@ -182,7 +199,7 @@ class Ui_MainWindow(object):
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "Interface Program"))
-        self.label.setText(_translate("MainWindow", "KLASIFIKASI WAJAH MENGGUNAKAN K-NN"))
+        self.label.setText(_translate("MainWindow", "IDENTIFIKASI WAJAH MENGGUNAKAN K-NN"))
         self.btnLoadData.setText(_translate("MainWindow", "Load"))
         self.btnProses.setText(_translate("MainWindow", "Proses"))
         self.label_3.setText(_translate("MainWindow", "Citra Asli"))
@@ -196,6 +213,8 @@ class Ui_MainWindow(object):
         self.label_9.setText(_translate("MainWindow", ":"))
         self.menuHome.setTitle(_translate("MainWindow", "Home"))
         self.actionexit.setText(_translate("MainWindow", "exit"))
+
+
 
         self.btnProses.clicked.connect(self.preprosImage)
         self.btnLoadData.clicked.connect(self.loadPathTrain)
@@ -281,7 +300,7 @@ class Ui_MainWindow(object):
 
 
 
-            self.textUji.setText(classification_report(y_test, y_predict))
+            self.label_10.setText(classification_report(y_test, y_predict))
 
             # self.labelUji.append(line])
 
@@ -389,10 +408,9 @@ class Ui_MainWindow(object):
         #     print("\n")
         #     if (y_test[i] != y_predict[i]):
         #         salah += 1
+# import arrow_rc
 # import note_rc
 import picture_rc
-
-
 
 if __name__ == "__main__":
     import sys
