@@ -16,6 +16,7 @@ from PyQt5.QtWidgets import QFileDialog, QLabel
 # from pca import*
 
 import Prepros
+import pca
 
 
 class Ui_MainWindow(object):
@@ -232,6 +233,8 @@ class Ui_MainWindow(object):
                     img_gray = QtGui.QImage(img_gray,width,height,QtGui.QImage.Format_Grayscale8)
                     img = QtGui.QPixmap.fromImage(img_gray)
                     self.label_img_gray.setPixmap(img)
+
+
 
 
 

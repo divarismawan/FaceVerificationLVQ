@@ -24,6 +24,8 @@ TRAIN_PATH = "D:/Tugas dan Materi/Semester 6/Teknologi Biometrika/Verifikasi Waj
 TEST_PATH = "D:/Tugas dan Materi/Semester 6/Teknologi Biometrika/Verifikasi Wajah/FaceVerificationLVQ/Grayscale/test"
 # cats = [cats for cats in os.listdir(PATH+"\\.")]
 
+
+
 def append_feature(PATH):
 
     images = []
@@ -96,14 +98,25 @@ def main():
     pca = PCA(n_components=n_components).fit(X_train)
     eigenfaces = pca.components_.reshape((n_components, h, w))
 
+
     print("Projecting the input data on the eigenfaces orthonormal basis")
     X_train_pca = pca.transform(X_train)
     X_test_pca = pca.transform(X_test)
 
 
-    # ni paling banyak benarnya dari 1-10 k nya
 
-    k=1
+
+    eigenface_titles = ["eigenface %d" % i for i in range(eigenfaces.shape[0])]
+    # print(eigenfaces.shape[0])
+    plot_gallery(eigenfaces, eigenface_titles, h, w)
+    # plt.imshow(eigenfaces.shape[0])
+    plt.show()
+
+def knn(X_train_pca, y_train, X_test_pca, y_test):
+
+    # ni paling banyak benarnya dari 1-10 k nya
+    #
+    k=2
     knn_model = KNeighborsClassifier(n_neighbors=k)
     model_save = knn_model.fit(X_train_pca, y_train)
     saved_model = pickle.dumps(model_save)
@@ -124,19 +137,14 @@ def main():
         if (y_test[i]!=y_predict[i]):
             salah+=1
 
-    benar = len(y_predict) - salah
-    akurasi = benar/len(y_predict) * 100
-    print("jumlah ="+str(len(y_predict)))
-    print("salah ="+str(salah))
-    print("benar ="+str(benar))
-    print("akurasi ="+str(akurasi))
-    # print(confusion_matrix(y_test, y_predict))
-    print(classification_report(y_test, y_predict))
-
-    eigenface_titles = ["eigenface %d" % i for i in range(eigenfaces.shape[0])]
-    plot_gallery(eigenfaces, eigenface_titles, h, w)
-
-    plt.show()
+    # benar = len(y_predict) - salah
+    # akurasi = benar/len(y_predict) * 100
+    # print("jumlah ="+str(len(y_predict)))
+    # print("salah ="+str(salah))
+    # print("benar ="+str(benar))
+    # print("akurasi ="+str(akurasi))
+    # # print(confusion_matrix(y_test, y_predict))
+    # print(classification_report(y_test, y_predict))
 
 
 if __name__ == "__main__":

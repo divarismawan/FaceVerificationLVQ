@@ -13,9 +13,14 @@ import os
 
 import cv2
 import numpy as np
+from matplotlib.mlab import PCA
 
 import Prepros
+from pca import *
 
+
+TRAIN_PATH = "D:/Tugas dan Materi/Semester 6/Teknologi Biometrika/Verifikasi Wajah/FaceVerificationLVQ/Grayscale/train"
+TEST_PATH = "D:/Tugas dan Materi/Semester 6/Teknologi Biometrika/Verifikasi Wajah/FaceVerificationLVQ/Grayscale/test"
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -164,12 +169,13 @@ class Ui_MainWindow(object):
 
     def loadPathTrain(self):
         file_path = str(QFileDialog.getExistingDirectory(None, "Select Directory"))
-
+        print(file_path)
         self.inputDataUji.setText(file_path)
         # print("File path : {}".format(file_path))
 
     def preprosImage(self):
         get_path = self.inputDataUji.toPlainText()
+
         for folder in os.listdir(get_path):
             path = os.path.join(get_path, folder)
             for i in range(2):
@@ -199,9 +205,40 @@ class Ui_MainWindow(object):
                     img = QtGui.QPixmap.fromImage(img_gray)
                     self.label_gray.setPixmap(img)
 
-                    #Eigenface
 
 
+                    # print("add dataset into numpy array")
+                    # train_dataset = append_feature(TRAIN_PATH)
+                    # print("train set created successfully")
+                    # test_dataset = append_feature(TEST_PATH)
+                    # print("train set created successfully")
+                    #
+                    # n_samples, h, w = train_dataset.images.shape
+                    #
+                    # X_train = train_dataset.data
+                    # y_train = train_dataset.target
+                    #
+                    # X_test = test_dataset.data
+                    # y_test = test_dataset.target
+                    #
+                    # # print(y_train)
+                    # # print(y_test)
+                    #
+                    # n_components = 70
+                    # pca = PCA(n_components=n_components).fit(X_train)
+                    # eigenfaces = pca.components_.reshape((n_components, h, w))
+                    #
+                    # print("Projecting the input data on the eigenfaces orthonormal basis")
+                    # X_train_pca = pca.transform(X_train)
+                    # X_test_pca = pca.transform(X_test)
+
+                    # print(eigenfaces)
+                    # height, width = eigenfaces[0][0].shape
+                    # eigenface = QtGui.QImage(eigenfaces, width, height, QtGui.QImage.Format_Grayscale8)
+                    # img_eigen = QtGui.QPixmap.fromImage(eigenface)
+                    # self.label_eigen.setPixmap(img_eigen)
+        # Eigenface
+        main()
 
 
 
