@@ -141,8 +141,7 @@ class Ui_MainWindow(object):
         self.btnUji.setFont(font)
         self.btnUji.setObjectName("btnUji")
         self.textUji = QtWidgets.QTextEdit(self.Image)
-        self.textUji.setGeometry(QtCore.QRect(370, 570, 520, 400))
-        self.textUji.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTop)
+        self.textUji.setGeometry(QtCore.QRect(370, 570, 500, 351))
         self.textUji.viewport().setProperty("cursor", QtGui.QCursor(QtCore.Qt.ForbiddenCursor))
         self.textUji.setObjectName("textUji")
         self.label_6 = QtWidgets.QLabel(self.Image)
@@ -183,8 +182,6 @@ class Ui_MainWindow(object):
         self.retranslateUi(MainWindow)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
-        self.FINAL_RESULT = ''
-
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "Interface Program"))
@@ -203,6 +200,7 @@ class Ui_MainWindow(object):
         self.menuHome.setTitle(_translate("MainWindow", "Home"))
         self.actionexit.setText(_translate("MainWindow", "exit"))
 
+        self.FINAL_RESULT = ''
         self.btnProses.clicked.connect(self.preprosImage)
         self.btnLoadData.clicked.connect(self.loadPathTrain)
         self.btnEigen.clicked.connect(self.pca)

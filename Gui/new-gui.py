@@ -22,8 +22,13 @@ import Prepros
 from pca import *
 
 
-TRAIN_PATH = "D:\kuliah\semester6\Biometrika\FaceVerificationLVQ\Grayscale/train"
-TEST_PATH = "D:\kuliah\semester6\Biometrika\FaceVerificationLVQ\Grayscale/test"
+# TRAIN_PATH = "D:\kuliah\semester6\Biometrika\FaceVerificationLVQ\Grayscale/train"
+# TEST_PATH = "D:\kuliah\semester6\Biometrika\FaceVerificationLVQ\Grayscale/test"
+
+TRAIN_PATH = "D:/Tugas dan Materi/Semester 6/Teknologi Biometrika/Verifikasi Wajah/FaceVerificationLVQ/Grayscale/train"
+TEST_PATH = "D:/Tugas dan Materi/Semester 6/Teknologi Biometrika/Verifikasi Wajah/FaceVerificationLVQ/Grayscale/test"
+
+
 
 from PyQt5 import QtCore, QtGui, QtWidgets
 
@@ -169,7 +174,7 @@ class Ui_MainWindow(object):
         self.scrollAreaWidgetContents.setGeometry(QtCore.QRect(0, 0, 529, 309))
         self.scrollAreaWidgetContents.setObjectName("scrollAreaWidgetContents")
         self.label_10 = QtWidgets.QLabel(self.scrollAreaWidgetContents)
-        self.label_10.setGeometry(QtCore.QRect(10, 10, 501, 291))
+        self.label_10.setGeometry(QtCore.QRect(20, 20, 501, 291))
         font = QtGui.QFont()
         font.setPointSize(14)
         self.label_10.setFont(font)
@@ -177,7 +182,7 @@ class Ui_MainWindow(object):
         self.label_10.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignTop)
         self.label_10.setObjectName("label_10")
         self.scrollArea.setWidget(self.label_10)
-        self.label_10.setAlignment(QtCore.Qt.AlignAbsolute)
+        self.label_10.setAlignment(QtCore.Qt.AlignRight)
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
         self.menubar.setGeometry(QtCore.QRect(0, 0, 1322, 21))
@@ -215,10 +220,11 @@ class Ui_MainWindow(object):
         self.actionexit.setText(_translate("MainWindow", "exit"))
 
 
-
+        self.RESULT_CLASSIFICATION = ''
         self.btnProses.clicked.connect(self.preprosImage)
         self.btnLoadData.clicked.connect(self.loadPathTrain)
         self.btnEigen.clicked.connect(self.pca)
+        self.btnUji.clicked.connect(self.hasil_uji)
 
     def loadPathTrain(self):
         file_path = str(QFileDialog.getExistingDirectory(None, "Select Directory"))
@@ -297,10 +303,9 @@ class Ui_MainWindow(object):
             # print(model_save)
 
             y_predict = knn_from_pickle.predict(X_test_pca)
+            self.RESULT_CLASSIFICATION = classification_report(y_test, y_predict)
 
 
-
-            self.label_10.setText(classification_report(y_test, y_predict))
 
             # self.labelUji.append(line])
 
@@ -315,6 +320,7 @@ class Ui_MainWindow(object):
             # print("\n")
             # if (y_test[i] != y_predict[i]):
             # salah += 1
+
 
     def append_feature(PATH):
 
@@ -408,6 +414,10 @@ class Ui_MainWindow(object):
         #     print("\n")
         #     if (y_test[i] != y_predict[i]):
         #         salah += 1
+
+    def hasil_uji(self):
+        self.label_10.setText(self.RESULT_CLASSIFICATION)
+        print(self.RESULT_CLASSIFICATION)
 # import arrow_rc
 # import note_rc
 import picture_rc

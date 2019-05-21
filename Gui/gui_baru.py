@@ -177,8 +177,8 @@ class Ui_MainWindow(object):
         self.menuHome.setTitle(_translate("MainWindow", "Home"))
         self.actionexit.setText(_translate("MainWindow", "exit"))
 
-import arrow_rc
-import note_rc
+# import arrow_rc
+# import note_rc
 import picture_rc
 
 if __name__ == "__main__":
