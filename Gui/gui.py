@@ -22,8 +22,12 @@ import Prepros
 from pca import *
 
 
-TRAIN_PATH = "D:\kuliah\semester6\Biometrika\FaceVerificationLVQ\Grayscale/train"
-TEST_PATH = "D:\kuliah\semester6\Biometrika\FaceVerificationLVQ\Grayscale/test"
+
+# TRAIN_PATH = "D:\kuliah\semester6\Biometrika\FaceVerificationLVQ\Grayscale/train"
+# TEST_PATH = "D:\kuliah\semester6\Biometrika\FaceVerificationLVQ\Grayscale/test"
+
+TRAIN_PATH = "D:/Tugas dan Materi/Semester 6/Teknologi Biometrika/Verifikasi Wajah/FaceVerificationLVQ/Grayscale/train"
+TEST_PATH = "D:/Tugas dan Materi/Semester 6/Teknologi Biometrika/Verifikasi Wajah/FaceVerificationLVQ/Grayscale/test"
 
 from PyQt5 import QtCore, QtGui, QtWidgets
 
@@ -179,6 +183,8 @@ class Ui_MainWindow(object):
         self.retranslateUi(MainWindow)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
+        self.FINAL_RESULT = ''
+
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "Interface Program"))
@@ -200,6 +206,8 @@ class Ui_MainWindow(object):
         self.btnProses.clicked.connect(self.preprosImage)
         self.btnLoadData.clicked.connect(self.loadPathTrain)
         self.btnEigen.clicked.connect(self.pca)
+        self.btnUji.clicked.connect(self.classification_result)
+
 
     def loadPathTrain(self):
         file_path = str(QFileDialog.getExistingDirectory(None, "Select Directory"))
@@ -214,8 +222,8 @@ class Ui_MainWindow(object):
                 path = os.path.join(get_path, folder)
                 for i in range(2):
                     for img in os.listdir(path):
-                        # print(img)
                         path_image = (os.path.join(path, img))
+
                         # Citra Asli
                         img_gui = QtGui.QImage(path_image)
                         pixmap = QtGui.QPixmap.fromImage(img_gui)
@@ -238,8 +246,6 @@ class Ui_MainWindow(object):
                         img_gray = QtGui.QImage(img_gray, width, height, QtGui.QImage.Format_Grayscale8)
                         img = QtGui.QPixmap.fromImage(img_gray)
                         self.label_gray.setPixmap(img)
-
-
 
     def pca(self):
         if(self.inputDataUji.toPlainText() !=''):
@@ -279,9 +285,8 @@ class Ui_MainWindow(object):
 
             y_predict = knn_from_pickle.predict(X_test_pca)
 
-
-
-            self.textUji.setText(classification_report(y_test, y_predict))
+            self.FINAL_RESULT = classification_report(y_test, y_predict)
+            # self.textUji.setText(classification_report(y_test, y_predict))
 
             # self.labelUji.append(line])
 
@@ -389,8 +394,13 @@ class Ui_MainWindow(object):
         #     print("\n")
         #     if (y_test[i] != y_predict[i]):
         #         salah += 1
+
+    def classification_result(self):
+        print("Hasil :{}".format(self.FINAL_RESULT))
+        self.textUji.setText(self.FINAL_RESULT)
 # import note_rc
 import picture_rc
+
 
 
 
