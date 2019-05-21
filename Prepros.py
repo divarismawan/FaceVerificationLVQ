@@ -3,86 +3,82 @@ import cv2
 import numpy as np
 from PIL import Image
 
-def check_folder(folder_name):
-    if os.path.isdir("Grayscale/train/"+folder_name) is False:
-        os.mkdir("Grayscale/gabung/"+folder_name) #create folder
-        os.mkdir('Grayscale/test/'+folder_name) #create folder
-        os.mkdir("Grayscale/train/"+folder_name) #create folder
-    pass
+# def check_folder(folder_name):
+#     if os.path.isdir("Grayscale/train/"+folder_name) is False:
+#         os.mkdir("Grayscale/gabung/"+folder_name) #create folder
+#         os.mkdir('Grayscale/test/'+folder_name) #create folder
+#         os.mkdir("Grayscale/train/"+folder_name) #create folder
+#     pass
 
 
 
 count_file = 0
 
-url_sumber = 'Dataset/tes/'
+# url_sumber = 'Dataset/tes/'
+#
+# url_tujuan = 'Grayscale/test/'
+# url_gabung = 'Grayscale/gabung/'
+#
+# classes = os.listdir(url_sumber)
+#
+# gray_class =  os.listdir(url_tujuan)
 
-url_tujuan = 'Grayscale/test/'
-url_gabung = 'Grayscale/gabung/'
-
-classes = os.listdir(url_sumber)
-
-gray_class =  os.listdir(url_tujuan)
-
-print("Jumlah Kelas : {}".format(len(classes)))
-print("Jumlah Kelas : {}".format(len(url_gabung)))
-print("Nama Kelas : {}".format(classes))
-
-
-for folder in classes:
-    count_file += 1
-    # Cek if file already exist
-    if(count_file > 42 and count_file <100):
-        if(folder == ""):
-
-            # check_folder(folder)
-
-            # print("Test")
-
-            path = os.path.join(url_sumber, folder)
-            print(folder)
-            for img in os.listdir(path):
-                img_array = cv2.imread(os.path.join(path, img))
-
-                # Add contras image
-                contrast_img = cv2.addWeighted(img_array, 1.5, np.zeros(img_array.shape, img_array.dtype), 0, 0)
-
-                # Face Detection library
-                face_casecade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
-                eye_cascade = cv2.CascadeClassifier('haarcascade_eye.xml')
-
-                faces = face_casecade.detectMultiScale(contrast_img, 1.3, 1)
-
-                print(faces)
-
-                for (x, y, w, h) in faces:
-                    cv2.rectangle(contrast_img, (x, y), (x + w, y + h), (255, 0, 0), 0)
-
-                    # roi_gray =contrast_img[y:h//2 - 300//2,  x:w//2 -300//2]
-                    # roi_color =contrast_img[y:h//2 - 300//2,  x:w//2 - 300//2]
-
-                    roi_gray = contrast_img[y:y + h, x:x+ w]
-                    roi_color = contrast_img[y:y + h, x:x + w]
-
-                dim = (300, 300)
-                crop_size =  300
-                gray = cv2.cvtColor(roi_color, cv2.COLOR_BGR2GRAY)
-                resized_gray = cv2.resize(gray, dim, interpolation=cv2.INTER_AREA)
-
-                # gray = roi_color.crop(( w// 2 - 50 // 2, h // 2 - 50 // 2, w // 2 + 50 // 2, h // 2 + 50 // 2))
-
-                cv2.imshow("original", img_array)
-                cv2.imshow("ROI", roi_gray)
-                cv2.imshow("grayscale", gray)
-                cv2.waitKey(0)
+# print("Jumlah Kelas : {}".format(len(classes)))
+# print("Jumlah Kelas : {}".format(len(url_gabung)))
+# print("Nama Kelas : {}".format(classes))
 
 
+def roi_img(img_path):
+    img_array = cv2.imread(img_path)
+    contrast_img = cv2.addWeighted(img_array, 1.5, np.zeros(img_array.shape, img_array.dtype), 0, 0)
 
-                # hasil  = url_tujuan + folder + '/ROI_GRAY_{}_{}.jpg'.format(folder, img)
-                # hasil2 = url_gabung + folder + '/ROI_GRAY_{}_{}.jpg'.format(folder, img)
-                # cv2.imwrite(hasil, resized_gray)
-                # cv2.imwrite(hasil2, resized_gray)
+    # Face Detection library
+    face_casecade = cv2.CascadeClassifier('D:/Tugas dan Materi/Semester 6/Teknologi Biometrika/Verifikasi Wajah/FaceVerificationLVQ/haarcascade_frontalface_default.xml')
+    faces = face_casecade.detectMultiScale(contrast_img, 1.3, 1)
 
-            print("{} gambar {} tersimpan".format(folder, img))
+    print(faces)
+
+    for (x, y, w, h) in faces:
+        cv2.rectangle(contrast_img, (x, y), (x + w, y + h), (255, 0, 0), 0)
+
+        roi_gray = contrast_img[y:y + h, x:x + w]
+        roi_color = contrast_img[y:y + h, x:x + w]
+
+        dim = (300, 300)
+        # gray = cv2.cvtColor(roi_color, cv2.COLOR_BGR2GRAY)
+        resized_gray = cv2.resize(roi_color, dim, interpolation=cv2.INTER_AREA)
+        return resized_gray
+
+def imgGray(img):
+    gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+
+    # cv2.imshow("Hasil",gray)
+    # cv2.waitKey(0)
+    return gray
+
+# for folder in classes:
+#     count_file += 1
+#     # Cek if file already exist
+#     if(count_file > 42 and count_file <100):
+#         if(folder != ""):
+#
+#             path = os.path.join(url_sumber, folder)
+#             print(folder)
+#             for img in os.listdir(path):
+#
+#                 path = os.path.join(path, img)
+#
+#                 img_array = roi_img(path)
+#                 img_gray  = imgGray(img_array)
+#
+#                 cv2.imshow("original", img_array)
+#                 cv2.imshow("ROI", img_gray)
+#
+#                 cv2.waitKey(0)
+#
+#
+#             print("{} gambar {} tersimpan".format(folder, img))
+
 
 
 

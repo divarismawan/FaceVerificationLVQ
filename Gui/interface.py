@@ -7,10 +7,15 @@
 # WARNING! All changes made in this file will be lost!
 import cv2
 import os
+import scipy.misc
 
 from PyQt5 import QtCore, QtGui, QtWidgets
-from PyQt5.QtGui import QPixmap
+from PyQt5.QtGui import QPixmap, QImage
 from PyQt5.QtWidgets import QFileDialog, QLabel
+
+# from pca import*
+
+import Prepros
 
 
 class Ui_MainWindow(object):
@@ -32,6 +37,26 @@ class Ui_MainWindow(object):
         self.textLatih.setObjectName("textLatih")
         self.label = QtWidgets.QLabel(self.frame)
         self.label.setGeometry(QtCore.QRect(310, 20, 711, 51))
+        """
+        ============================================================================================
+        """
+        # Show Image Proses
+        self.label_img_asli = QtWidgets.QLabel(self.frame)
+        self.label_img_asli.setGeometry(QtCore.QRect(80, 180, 240, 320))
+        self.label_img_asli.setScaledContents(True)
+
+        self.label_img_roi = QtWidgets.QLabel(self.frame)
+        self.label_img_roi.setGeometry(QtCore.QRect(350, 180, 300, 300))
+        self.label_img_roi.setScaledContents(True)
+
+        self.label_img_gray = QtWidgets.QLabel(self.frame)
+        self.label_img_gray.setGeometry(QtCore.QRect(660, 180, 300, 300))
+        self.label_img_gray.setScaledContents(True)
+
+        """
+        ============================================================================================
+        """
+
         font = QtGui.QFont()
         font.setPointSize(26)
         self.label.setFont(font)
@@ -108,18 +133,29 @@ class Ui_MainWindow(object):
         font.setPointSize(12)
         self.lineEdit_5.setFont(font)
         self.lineEdit_5.setObjectName("lineEdit_5")
-        self.view_original = QtWidgets.QGraphicsView(self.frame)
-        self.view_original.setGeometry(QtCore.QRect(40, 180, 300, 300))
-        self.view_original.setObjectName("view_original")
-        self.view_gray = QtWidgets.QGraphicsView(self.frame)
-        self.view_gray.setGeometry(QtCore.QRect(350, 180, 300, 300))
-        self.view_gray.setObjectName("view_gray")
-        self.view_roi = QtWidgets.QGraphicsView(self.frame)
-        self.view_roi.setGeometry(QtCore.QRect(660, 180, 300, 300))
-        self.view_roi.setObjectName("view_roi")
-        self.graphicsView_4 = QtWidgets.QGraphicsView(self.frame)
-        self.graphicsView_4.setGeometry(QtCore.QRect(970, 180, 300, 300))
-        self.graphicsView_4.setObjectName("graphicsView_4")
+
+        """
+        ============================================================================================
+        """
+
+        # self.view_original = QtWidgets.QGraphicsView(self.frame)
+        # self.view_original.setGeometry(QtCore.QRect(40, 180, 300, 300))
+        # self.view_original.setObjectName("view_original")
+        # self.view_gray = QtWidgets.QGraphicsView(self.frame)
+        # self.view_gray.setGeometry(QtCore.QRect(350, 180, 300, 300))
+        # self.view_gray.setObjectName("view_gray")
+        # self.view_roi = QtWidgets.QGraphicsView(self.frame)
+        # self.view_roi.setGeometry(QtCore.QRect(660, 180, 300, 300))
+        # self.view_roi.setObjectName("view_roi")
+        # self.graphicsView_4 = QtWidgets.QGraphicsView(self.frame)
+        # self.graphicsView_4.setGeometry(QtCore.QRect(970, 180, 300, 300))
+        # self.graphicsView_4.setObjectName("graphicsView_4")
+
+        """
+        ============================================================================================
+        """
+
+
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
         self.menubar.setGeometry(QtCore.QRect(0, 0, 1342, 21))
@@ -162,8 +198,9 @@ class Ui_MainWindow(object):
 
     def loadPathTrain(self):
         file_path = str(QFileDialog.getExistingDirectory(None, "Select Directory"))
+
         self.textLatih.setText(file_path)
-        print("File path : {}".format(file_path))
+        # print("File path : {}".format(file_path))
 
     def preprosImage(self):
         get_path = self.textLatih.toPlainText()
@@ -171,16 +208,41 @@ class Ui_MainWindow(object):
             path = os.path.join(get_path, folder)
             for i in range(2):
                 for img in os.listdir(path):
-                    dir_img = (os.path.join(path, img))
-
-                    img_gui = QtGui.QImage(dir_img)
+                    print(img)
+                    path_image = (os.path.join(path, img))
+                    # Citra Asli
+                    img_gui = QtGui.QImage(path_image)
                     pixmap  = QtGui.QPixmap.fromImage(img_gui)
 
-                    self.label_3.setPixmap(pixmap)
+                    self.label_img_asli.setPixmap(pixmap)
+
+                    #ROI
+                    img_roi = Prepros.roi_img(path_image)
+
+                    print(img_roi.shape)
+                    height, width, channel = img_roi.shape
+                    bytesPerLine = 3 * width
+                    qImg = QImage(img_roi.data, width, height, bytesPerLine, QImage.Format_RGB888).rgbSwapped()
+                    roi_map = QPixmap(qImg)
+                    self.label_img_roi.setPixmap(roi_map)
+
+                    #Grayscale
+                    img_gray = Prepros.imgGray(img_roi)
+                    height, width = img_gray.shape
+                    img_gray = QtGui.QImage(img_gray,width,height,QtGui.QImage.Format_Grayscale8)
+                    img = QtGui.QPixmap.fromImage(img_gray)
+                    self.label_img_gray.setPixmap(img)
+
+
+
+
+
+
 
 
 
 if __name__ == "__main__":
+    # main()
     import sys
     app = QtWidgets.QApplication(sys.argv)
     MainWindow = QtWidgets.QMainWindow()

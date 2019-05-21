@@ -20,10 +20,9 @@ from sklearn.decomposition import PCA
 from sklearn.svm import SVC
 from sklearn.neighbors import KNeighborsClassifier
 
-TRAIN_PATH = "Grayscale/train"
-TEST_PATH = "Grayscale/test"
+TRAIN_PATH = "D:/Tugas dan Materi/Semester 6/Teknologi Biometrika/Verifikasi Wajah/FaceVerificationLVQ/Grayscale/train"
+TEST_PATH = "D:/Tugas dan Materi/Semester 6/Teknologi Biometrika/Verifikasi Wajah/FaceVerificationLVQ/Grayscale/test"
 # cats = [cats for cats in os.listdir(PATH+"\\.")]
-    
 
 def append_feature(PATH):
 

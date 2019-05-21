@@ -2,53 +2,185 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a1fe8ec0-3a3c-4166-b08b-7cceb7d39607" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/FaceVerificationLVQ.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/FaceVerificationLVQ.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Grayscale/test/Ade Yuli/ROI_GRAY_Ade Yuli_DSC05249.JPG.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Grayscale/test/Ade Yuli/ROI_GRAY_Ade Yuli_DSC05252.JPG.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Grayscale/test/Adi Widhiantara/ROI_GRAY_Adi Widhiantara_DSC05120.JPG.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Grayscale/test/Adi Widhiantara/ROI_GRAY_Adi Widhiantara_DSC05122.JPG.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Grayscale/test/Agung/ROI_GRAY_Agung_DSC05010.JPG.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Grayscale/test/Agung/ROI_GRAY_Agung_DSC05012.JPG.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Grayscale/test/Albert Continoes/ROI_GRAY_Albert Continoes_DSC05546.JPG.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Grayscale/test/Albert Continoes/ROI_GRAY_Albert Continoes_DSC05548.JPG.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Grayscale/test/Angga/ROI_GRAY_Angga_DSC05973.JPG.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Grayscale/test/Angga/ROI_GRAY_Angga_DSC05974.JPG.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Grayscale/test/Ary Satyawan/ROI_GRAY_Ary Satyawan_DSC05335.JPG.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Grayscale/test/Ary Satyawan/ROI_GRAY_Ary Satyawan_DSC05336.JPG.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Grayscale/test/Aswin/ROI_GRAY_Aswin_DSC06446.JPG.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Grayscale/test/Aswin/ROI_GRAY_Aswin_DSC06448.JPG.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Grayscale/test/Darmawan/ROI_GRAY_Darmawan_DSC04960.JPG.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Grayscale/test/Darmawan/ROI_GRAY_Darmawan_DSC04962.JPG.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Grayscale/test/Dwi Antara/ROI_GRAY_Dwi Antara_DSC05836.JPG.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Grayscale/train/Ade Yuli/ROI_GRAY_Ade Yuli_DSC05250.JPG.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Grayscale/train/Ade Yuli/ROI_GRAY_Ade Yuli_DSC05251.JPG.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Grayscale/train/Ade Yuli/ROI_GRAY_Ade Yuli_DSC05253.JPG.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Grayscale/train/Adi Widhiantara/ROI_GRAY_Adi Widhiantara_DSC05119.JPG.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Grayscale/train/Adi Widhiantara/ROI_GRAY_Adi Widhiantara_DSC05121.JPG.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Grayscale/train/Adi Widhiantara/ROI_GRAY_Adi Widhiantara_DSC05123.JPG.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Grayscale/train/Agung/ROI_GRAY_Agung_DSC05009.JPG.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Grayscale/train/Agung/ROI_GRAY_Agung_DSC05011.JPG.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Grayscale/train/Agung/ROI_GRAY_Agung_DSC05013.JPG.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Grayscale/train/Albert Continoes/ROI_GRAY_Albert Continoes_DSC05545.JPG.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Grayscale/train/Albert Continoes/ROI_GRAY_Albert Continoes_DSC05547.JPG.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Grayscale/train/Albert Continoes/ROI_GRAY_Albert Continoes_DSC05549.JPG.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Grayscale/train/Angga/ROI_GRAY_Angga_DSC05972.JPG.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Grayscale/train/Angga/ROI_GRAY_Angga_DSC05975.JPG.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Grayscale/train/Angga/ROI_GRAY_Angga_DSC05976.JPG.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Grayscale/train/Ary Satyawan/ROI_GRAY_Ary Satyawan_DSC05333.JPG.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Grayscale/train/Ary Satyawan/ROI_GRAY_Ary Satyawan_DSC05334.JPG.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Grayscale/train/Ary Satyawan/ROI_GRAY_Ary Satyawan_DSC05337.JPG.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Grayscale/train/Aswin/ROI_GRAY_Aswin_DSC06445.JPG.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Grayscale/train/Aswin/ROI_GRAY_Aswin_DSC06447.JPG.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Grayscale/train/Aswin/ROI_GRAY_Aswin_DSC06449.JPG.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Grayscale/train/Darmawan/ROI_GRAY_Darmawan_DSC04959.JPG.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Grayscale/train/Darmawan/ROI_GRAY_Darmawan_DSC04961.JPG.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Grayscale/train/Darmawan/ROI_GRAY_Darmawan_DSC04963.JPG.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Grayscale/train/Dwi Antara/ROI_GRAY_Dwi Antara_DSC05841.JPG.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataset/train/Adek Dwinanda/DSC05877.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataset/train/Adek Dwinanda/DSC05879.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataset/train/Adek Dwinanda/DSC05881.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataset/train/Adhi Pramudya/DSC05279.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataset/train/Adhi Pramudya/DSC05281.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataset/train/Adhi Pramudya/DSC05283.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataset/train/Adi Putra/DSC06034.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataset/train/Adi Putra/DSC06036.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataset/train/Adi Putra/DSC06038.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataset/train/Adi Widhiantara/DSC05119.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataset/train/Adi Widhiantara/DSC05121.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataset/train/Adi Widhiantara/DSC05123.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataset/train/Adiarta/DSC06232.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataset/train/Adiarta/DSC06234.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataset/train/Adiarta/DSC06236.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataset/train/Aditya Utama/DSC06073.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataset/train/Aditya Utama/DSC06075.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataset/train/Aditya Utama/DSC06077.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataset/train/Agung Meidi/DSC05576.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataset/train/Agung Meidi/DSC05578.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataset/train/Agung Meidi/DSC05580.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataset/train/Agung/DSC05009.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataset/train/Agung/DSC05011.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataset/train/Agung/DSC05013.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataset/train/Agus Apriana/DSC06547.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataset/train/Agus Apriana/DSC06549.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataset/train/Agus Apriana/DSC06551.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataset/train/Agus Hendra/DSC05149.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataset/train/Agus Hendra/DSC05151.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataset/train/Agus Hendra/DSC05153.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataset/train/Agus Wiratha/DSC06172.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataset/train/Agus Wiratha/DSC06174.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataset/train/Agus Wiratha/DSC06176.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataset/train/Albert Continoes/DSC05545.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataset/train/Albert Continoes/DSC05547.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataset/train/Albert Continoes/DSC05549.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataset/train/Alit D/DSC05907.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataset/train/Alit D/DSC05909.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataset/train/Alit D/DSC05912.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataset/train/Alit Sudawiaya/DSC06517.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataset/train/Alit Sudawiaya/DSC06519.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataset/train/Alit Sudawiaya/DSC06521.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataset/train/Angga/DSC05972.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataset/train/Angga/DSC05975.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataset/train/Angga/DSC05976.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataset/train/Aniek Laksmidewi/DSC06054.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataset/train/Aniek Laksmidewi/DSC06056.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataset/train/Aniek Laksmidewi/DSC06058.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataset/train/Ariana/DSC05321.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataset/train/Ariana/DSC05323.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataset/train/Ariana/DSC05325.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataset/train/Arik/DSC05785.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataset/train/Arik/DSC05788.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataset/train/Arik/DSC05790.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataset/train/Aris Eko P/DSC05774.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataset/train/Aris Eko P/DSC05776.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataset/train/Aris Eko P/DSC05778.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataset/train/Arsa Suteja/DSC05474.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataset/train/Arsa Suteja/DSC05476.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataset/train/Arsa Suteja/DSC05478.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataset/train/Arsika/DSC05433.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataset/train/Arsika/DSC05435.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataset/train/Arsika/DSC05437.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataset/train/Artajaya/DSC05848.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataset/train/Artajaya/DSC05850.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataset/train/Artajaya/DSC05851.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataset/train/Ary Satyawan/DSC05334.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataset/train/Ary Satyawan/DSC05336.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataset/train/Ary Satyawan/DSC05337.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataset/train/Arya D/DSC05423.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataset/train/Arya D/DSC05424.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataset/train/Arya D/DSC05427.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataset/train/Aryana/DSC06023.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataset/train/Aryana/DSC06025.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataset/train/Aryana/DSC06027.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataset/train/Aryawan/DSC05754.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataset/train/Aryawan/DSC05756.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataset/train/Aryawan/DSC05758.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataset/train/Astin Surya/DSC05646.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataset/train/Astin Surya/DSC05648.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataset/train/Astin Surya/DSC05650.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataset/train/Aswin/DSC06445.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataset/train/Aswin/DSC06447.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataset/train/Aswin/DSC06449.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataset/train/Ayu Puspa Dewi/DSC06363.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataset/train/Ayu Puspa Dewi/DSC06365.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataset/train/Ayu Puspa Dewi/DSC06367.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataset/train/Bagus Putra Ariana/DSC05080.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataset/train/Bagus Putra Ariana/DSC05081.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataset/train/Bagus Putra Ariana/DSC05083.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataset/train/Bambang Ari/DSC06012.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataset/train/Bambang Ari/DSC06015.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataset/train/Bambang Ari/DSC06017.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataset/train/Bawa Arnawa/DSC06192.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataset/train/Bawa Arnawa/DSC06194.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataset/train/Bawa Arnawa/DSC06196.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataset/train/Bawa P/DSC06465.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataset/train/Bawa P/DSC06467.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataset/train/Bawa P/DSC06469.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataset/train/Benediltus/DSC05259.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataset/train/Benediltus/DSC05261.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataset/train/Benediltus/DSC05263.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataset/train/Budastra/DSC05566.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataset/train/Budastra/DSC05568.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataset/train/Budastra/DSC05570.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataset/train/Budiasa/DSC06353.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataset/train/Budiasa/DSC06355.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataset/train/Budiasa/DSC06357.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataset/train/Buniran/DSC04909.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataset/train/Buniran/DSC04911.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataset/train/Buniran/DSC04913.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataset/train/Citra Aprilia/DSC05179.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataset/train/Citra Aprilia/DSC05180.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataset/train/Citra Aprilia/DSC05183.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataset/train/Darma Yuda/DSC06455.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataset/train/Darma Yuda/DSC06456.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataset/train/Darma Yuda/DSC06457.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataset/train/Darmawan/DSC04959.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataset/train/Darmawan/DSC04961.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataset/train/Darmawan/DSC04963.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataset/train/Deazy/DSC05764.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataset/train/Deazy/DSC05766.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataset/train/Deazy/DSC05768.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataset/train/Deny Satriawan/DSC06223.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataset/train/Deny Satriawan/DSC06225.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataset/train/Deny Satriawan/DSC06226.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataset/train/Diah Savitri/DSC05796.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataset/train/Diah Savitri/DSC05798.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataset/train/Diah Savitri/DSC05799.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataset/train/Dwi Antara/DSC05837.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataset/train/Dwi Antara/DSC05840.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataset/train/Dwi Antara/DSC05841.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataset/train/Eka Cahyadi/DSC06142.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataset/train/Eka Cahyadi/DSC06144.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataset/train/Eka Cahyadi/DSC06145.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataset/train/Fahron/DSC05170.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataset/train/Fahron/DSC05172.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataset/train/Fahron/DSC05173.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataset/train/Fahrurrozi A/DSC05516.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataset/train/Fahrurrozi A/DSC05518.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataset/train/Fahrurrozi A/DSC05519.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataset/train/Gita Indrawan/DSC05616.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataset/train/Gita Indrawan/DSC05618.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataset/train/Gita Indrawan/DSC05619.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataset/train/Gusur/DSC05229.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataset/train/Gusur/DSC05231.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataset/train/Gusur/DSC05233.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataset/train/Ibu Budi/DSC05536.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataset/train/Ibu Budi/DSC05537.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataset/train/Ibu Budi/DSC05538.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataset/train/Iwan Tofani/DSC05724.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataset/train/Iwan Tofani/DSC05726.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataset/train/Iwan Tofani/DSC05727.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataset/train/Junaidi/DSC06406.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataset/train/Junaidi/DSC06407.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataset/train/Junaidi/DSC06409.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataset/train/Kadek Widana/DSC05596.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataset/train/Kadek Widana/DSC05599.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataset/train/Kadek Widana/DSC05600.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataset/train/Karsika/DSC05445.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataset/train/Karsika/DSC05446.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataset/train/Karsika/DSC05448.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataset/train/Kharisma Maha Putra/DSC06152.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataset/train/Kharisma Maha Putra/DSC06155.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataset/train/Kharisma Maha Putra/DSC06156.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataset/train/Maya Ritasari/DSC05099.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataset/train/Maya Ritasari/DSC05101.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataset/train/Maya Ritasari/DSC05102.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataset/train/Murdika Negara/DSC05703.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataset/train/Murdika Negara/DSC05706.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataset/train/Murdika Negara/DSC05707.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataset/train/Murtana/DSC06272.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataset/train/Murtana/DSC06274.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataset/train/Murtana/DSC06276.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataset/train/Mustika/DSC06202.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataset/train/Mustika/DSC06204.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataset/train/Mustika/DSC06206.JPG" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Gui/interface.py" beforeDir="false" afterPath="$PROJECT_DIR$/Gui/interface.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gui/interface.ui" beforeDir="false" afterPath="$PROJECT_DIR$/Gui/interface.ui" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Prepros.py" beforeDir="false" afterPath="$PROJECT_DIR$/Prepros.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pca.py" beforeDir="false" afterPath="$PROJECT_DIR$/pca.py" afterDir="false" />
     </list>
@@ -63,22 +195,36 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Prepros.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1584">
-              <caret line="75" column="16" selection-start-line="75" selection-start-column="16" selection-end-line="75" selection-end-column="30" />
+            <state relative-caret-position="427">
+              <caret line="55" column="20" lean-forward="true" selection-start-line="55" selection-start-column="20" selection-end-line="55" selection-end-column="20" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
+                <element signature="e#1548#1572#0" />
+                <element signature="e#2826#2833#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Gui/interface.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="486">
+              <caret line="251" column="25" lean-forward="true" selection-start-line="251" selection-start-column="25" selection-end-line="251" selection-end-column="25" />
+              <folding>
+                <element signature="e#197#207#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Gui/interface.py">
+        <entry file="file://$PROJECT_DIR$/Gui/interface3.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="167" column="27" lean-forward="true" selection-start-line="167" selection-start-column="27" selection-end-line="167" selection-end-column="27" />
+            <state relative-caret-position="289">
+              <caret line="202" column="20" selection-start-line="202" selection-start-column="20" selection-end-line="202" selection-end-column="20" />
               <folding>
-                <element signature="e#197#207#0" expanded="true" />
+                <element signature="e#198#240#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -87,7 +233,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lvq.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="506">
+            <state relative-caret-position="176">
               <caret line="23" column="49" selection-start-line="23" selection-start-column="49" selection-end-line="23" selection-end-column="49" />
             </state>
           </provider>
@@ -96,8 +242,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pca.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1826">
-              <caret line="103" selection-start-line="103" selection-end-line="103" />
+            <state relative-caret-position="177">
+              <caret line="132" column="48" selection-start-line="132" selection-start-column="48" selection-end-line="132" selection-end-column="48" />
               <folding>
                 <element signature="e#0#37#0" expanded="true" />
               </folding>
@@ -119,6 +265,8 @@
       <find>category</find>
       <find>textLatih</find>
       <find>QLa</find>
+      <find>label_3</find>
+      <find>print</find>
     </findStrings>
     <replaceStrings>
       <replace>folder</replace>
@@ -135,6 +283,7 @@
         <option value="$PROJECT_DIR$/pca.py" />
         <option value="$PROJECT_DIR$/Prepros.py" />
         <option value="$PROJECT_DIR$/Gui/interface.py" />
+        <option value="$PROJECT_DIR$/Gui/interface3.py" />
       </list>
     </option>
   </component>
@@ -155,6 +304,11 @@
             <path>
               <item name="FaceVerificationLVQ" type="b2602c69:ProjectViewProjectNode" />
               <item name="FaceVerificationLVQ" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FaceVerificationLVQ" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FaceVerificationLVQ" type="462c0819:PsiDirectoryNode" />
+              <item name="Grayscale" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="FaceVerificationLVQ" type="b2602c69:ProjectViewProjectNode" />
@@ -184,7 +338,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.interface">
+  <component name="RunManager" selected="Python.interface3">
     <configuration name="Prepros" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="FaceVerificationLVQ" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -219,6 +373,27 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Gui/interface.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="interface3" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="FaceVerificationLVQ" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Gui" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Gui/interface3.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -274,12 +449,14 @@
       <item itemvalue="Python.lvq" />
       <item itemvalue="Python.pca" />
       <item itemvalue="Python.interface" />
+      <item itemvalue="Python.interface3" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.interface3" />
         <item itemvalue="Python.interface" />
-        <item itemvalue="Python.Prepros" />
         <item itemvalue="Python.pca" />
+        <item itemvalue="Python.Prepros" />
         <item itemvalue="Python.lvq" />
       </list>
     </recent_temporary>
@@ -444,39 +621,51 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Prepros.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1584">
-          <caret line="75" column="16" selection-start-line="75" selection-start-column="16" selection-end-line="75" selection-end-column="30" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lvq.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="506">
-          <caret line="23" column="49" selection-start-line="23" selection-start-column="49" selection-end-line="23" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pca.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1826">
-          <caret line="103" selection-start-line="103" selection-end-line="103" />
+        <state relative-caret-position="177">
+          <caret line="132" column="48" selection-start-line="132" selection-start-column="48" selection-end-line="132" selection-end-column="48" />
           <folding>
             <element signature="e#0#37#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/lvq.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="23" column="49" selection-start-line="23" selection-start-column="49" selection-end-line="23" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Prepros.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="427">
+          <caret line="55" column="20" lean-forward="true" selection-start-line="55" selection-start-column="20" selection-end-line="55" selection-end-column="20" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+            <element signature="e#1548#1572#0" />
+            <element signature="e#2826#2833#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Gui/interface.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="167" column="27" lean-forward="true" selection-start-line="167" selection-start-column="27" selection-end-line="167" selection-end-column="27" />
+        <state relative-caret-position="486">
+          <caret line="251" column="25" lean-forward="true" selection-start-line="251" selection-start-column="25" selection-end-line="251" selection-end-column="25" />
           <folding>
             <element signature="e#197#207#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Gui/interface3.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="202" column="20" selection-start-line="202" selection-start-column="20" selection-end-line="202" selection-end-column="20" />
+          <folding>
+            <element signature="e#198#240#0" expanded="true" />
           </folding>
         </state>
       </provider>
